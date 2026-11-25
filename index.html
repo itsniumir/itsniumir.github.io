@@ -1013,6 +1013,7 @@
     if (!audio || !btn) return;
     audio.volume = 0.35;
     var wasPlayingBeforeVideo = false;
+    var visitorChoseSilence = false;
     function sync() {
       var playing = !audio.paused;
       btn.classList.toggle("is-playing", playing);
@@ -1020,17 +1021,41 @@
       btn.setAttribute("aria-label", playing ? "Pause background music" : "Play background music");
       btn.title = playing ? "Pause music" : "Play music";
     }
+    function tryPlay() {
+      var p = audio.play();
+      if (p && p.catch) p.catch(function () {});
+    }
     btn.addEventListener("click", function () {
       if (audio.paused) {
-        var p = audio.play();
-        if (p && p.catch) p.catch(function () {});
+        visitorChoseSilence = false;
+        tryPlay();
       } else {
+        visitorChoseSilence = true;
         audio.pause();
       }
     });
     audio.addEventListener("play", sync);
     audio.addEventListener("pause", sync);
     sync();
+    /* Try to start the music as soon as the page opens. Browsers that block
+       sound autoplay reject this silently; the first-interaction starter
+       below then begins playback on the visitor's first tap or click. */
+    tryPlay();
+    function stopStarter() {
+      document.removeEventListener("pointerdown", startOnInteract);
+      document.removeEventListener("touchstart", startOnInteract);
+      document.removeEventListener("click", startOnInteract);
+    }
+    function startOnInteract(e) {
+      if (e.target === btn || btn.contains(e.target)) return;
+      if (visitorChoseSilence) { stopStarter(); return; }
+      if (!audio.paused) { stopStarter(); return; }
+      tryPlay();
+    }
+    document.addEventListener("pointerdown", startOnInteract);
+    document.addEventListener("touchstart", startOnInteract);
+    document.addEventListener("click", startOnInteract);
+    audio.addEventListener("play", stopStarter);
     /* Pause the music while a Sample Works video is open; resume on close only if it was playing before. */
     var lightbox = document.getElementById("videoLightbox");
     if (lightbox && window.MutationObserver) {
