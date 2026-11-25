@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=1280" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light" />
 <meta name="description" content="Niusha Mirzaei, @itsniumir, beauty & lifestyle UGC creator in Vancouver. Fresh, feminine and glowing aesthetic, honest reviews, content in English & Farsi, shot on iPhone 18 Pro Max." />
 <link rel="icon" href="data:," />
@@ -257,26 +257,127 @@
     .shop-grid{grid-template-columns:1fr 1fr}
   }
   @media (max-width:860px){
+    /* ---- mobile slides: each section is one composed screen ---- */
+    html{scroll-snap-type:y proximity}
+    body{font-size:15px}
+    section,footer.closing-sec{scroll-snap-align:start;scroll-margin-top:100px}
+    section{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:40px 0}
+    footer.closing-sec{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:48px 0 34px}
+    .label{font-size:.62rem;letter-spacing:.26em;margin-bottom:14px}
+    .label::after{flex-basis:48px}
+    h2.title{font-size:clamp(1.95rem,8.4vw,2.5rem);line-height:1}
+    .lede{font-size:.95rem}
     .hero-grid,.about-grid,.vision-grid,.style-grid,.featured-grid,.closing{grid-template-columns:1fr}
-    .featured-cover{margin:0}
-    .stat-grid{grid-template-columns:repeat(2,1fr)}
-    .pills{max-width:none}
-    .hero-photo{max-width:520px}
-    .topbar-in{height:auto;padding:14px 0;flex-direction:column;align-items:flex-start;gap:10px}
-    nav.mainnav{justify-content:flex-start}
+
+    /* compact top bar */
+    .topbar-in{height:auto;padding:10px 0;flex-direction:column;align-items:flex-start;gap:6px}
+    .brandmark{font-size:1rem}
+    nav.mainnav{justify-content:flex-start;gap:6px 14px}
+    nav.mainnav a{font-size:.6rem;letter-spacing:.16em;padding:4px 0}
+
+    /* hero slide: photo, name, role and intro together on the first screen */
+    .hero{min-height:calc(100vh - 100px);min-height:calc(100svh - 100px);padding:18px 0 22px}
+    .hero-grid{display:flex;flex-direction:column;gap:14px}
+    .hero-photo{order:-1;max-width:124px;margin:0 auto}
+    .hero h1{font-size:clamp(2.5rem,12vw,2.9rem);line-height:.92;margin:0;text-align:center}
+    .hero-role{font-size:.62rem;letter-spacing:.2em;margin-top:12px;justify-content:center;text-align:center}
+    .hero-quote{font-size:1.02rem;line-height:1.4;margin-top:16px;padding-left:16px}
+    .hero-sub{font-size:.9rem;line-height:1.6;margin-top:12px}
+    .hero-open{font-size:.86rem;line-height:1.55;margin-top:10px}
+    .hero-meta{margin-top:14px}
+    .hero-meta span{font-size:.6rem;letter-spacing:.12em;padding:9px 10px}
+    .pills{max-width:none;margin-top:14px}
+    .pill{min-height:52px;padding:10px 14px;gap:12px}
+    .pill .dot{width:32px;height:32px}
+    .pill b{font-size:.86rem}
+
+    /* about slide: photo kept with its text */
+    .about-grid{display:flex;flex-direction:column;gap:22px;margin-top:26px}
+    .about-grid>div:last-child{order:-1}
+    .about-photo img{aspect-ratio:4/3}
+    .about-photo-note{font-size:1rem;margin-top:10px}
+    .about .big-name{font-size:clamp(1.9rem,8.4vw,2.4rem)}
+    .about h3{font-size:1.25rem}
+    .about p{font-size:.93rem;line-height:1.7;margin-top:14px}
+
+    /* style slide: photo kept with its list */
+    .style-grid{display:flex;flex-direction:column;gap:22px;margin-top:26px}
+    .style-grid>div:last-child{order:-1}
+    .style-photo img{aspect-ratio:4/3}
+    .mystyle p{font-size:.93rem;line-height:1.7}
+    .sparkle-list{margin:20px 0}
+    .sparkle-list li{padding:11px 2px;font-size:.84rem}
+
+    /* featured slide: cover kept with its stats */
+    .featured-grid{gap:26px}
+    .featured-cover{margin:0 auto;max-width:225px}
+    .featured-desc{font-size:.94rem;line-height:1.7;margin-top:16px}
+    .stat-grid{grid-template-columns:repeat(3,1fr);margin-top:22px}
+    .stat{padding:14px 4px 11px}
+    .stat b{font-size:1.3rem}
+    .stat span{font-size:.55rem;letter-spacing:.14em;margin-top:6px}
+    .featured-points{margin-top:20px;gap:10px}
+    .featured-points li{font-size:.9rem}
+    .featured-watch{margin-top:22px;padding:11px 18px}
+
+    /* brands + sample works: tidy compact grids */
+    .logo-grid{margin-top:28px}
+    .and-more{font-size:1.3rem;margin-top:26px}
+    .work-note{max-width:none}
+    .cat-note{font-size:1.05rem;margin-top:18px}
+    .cards{margin-top:24px}
+
+    /* vision slide */
+    .vision-grid{gap:26px;margin-top:28px}
+    .vision-col{padding-top:20px}
+    .vision h3{font-size:1.55rem}
+    .vision p{font-size:.93rem;line-height:1.7}
+
+    /* shop slide */
+    .shop-grid{margin-top:28px}
+    .shop-card{padding:22px 20px}
+    .shop-card h3{font-size:1.3rem}
+
+    /* services slide: cards grouped 2 across */
     .svc-grid{grid-template-columns:1fr 1fr}
-    .hero h1{font-size:clamp(3.4rem,14vw,5rem)}
+    .svc-tag{font-size:1.22rem;margin-top:14px}
+    .svc-banner{margin-top:24px;padding:14px 16px;font-size:.66rem;letter-spacing:.2em}
+    .svc-box{min-height:78px;padding:16px 10px;font-size:.68rem;letter-spacing:.1em}
+    .svc-note{margin-top:22px;font-size:.9rem}
+
+    /* process slide */
+    .process-sub{font-size:1.12rem;margin-top:14px}
+    .process-grid{margin-top:28px}
+
+    /* closing slide */
+    .closing{gap:26px}
+    .closing h2{font-size:clamp(2.6rem,13vw,3.3rem)}
+    .closing-id img{width:76px;height:76px}
+    .closing-name{font-size:1.3rem}
+    .foot-links{margin-top:34px;padding-top:20px}
   }
   @media (max-width:600px){
-    .cards{grid-template-columns:repeat(2,1fr);gap:20px 14px}
+    .cards{grid-template-columns:repeat(2,1fr);gap:20px 12px}
+    .card .cap{font-size:.78rem;margin-top:9px}
     .shop-grid{grid-template-columns:1fr}
-    .svc-grid{grid-template-columns:1fr}
-    .process-grid{grid-template-columns:1fr}
-    .logo-grid{grid-template-columns:repeat(auto-fill,minmax(110px,1fr))}
-    .hero-meta span{flex:1 1 40%;border-bottom:1px solid var(--line-soft)}
+    .logo-grid{grid-template-columns:repeat(4,1fr)}
+    .logo-badge{padding:8px}
+    .logo-badge img{max-width:calc(100% - 14px);max-height:calc(100% - 12px)}
+    .logo-badge .wordmark{font-size:.95rem;letter-spacing:.14em;padding-left:.14em}
+    .logo-badge .wordmark.long{font-size:.58rem;letter-spacing:.06em;padding-left:.06em;line-height:1.4}
+    .logo-badge .wordmark[style]{font-size:.8rem !important;letter-spacing:.1em !important;padding-left:.1em !important}
+    .process-grid{grid-template-columns:1fr 1fr}
+    .process-card{padding:18px 14px 16px}
+    .process-top{margin-bottom:12px}
+    .process-icon{width:38px;height:38px}
+    .process-icon svg{width:18px;height:18px}
+    .process-num{font-size:1.05rem}
+    .process-card h3{font-size:1.08rem}
+    .process-card p{font-size:.8rem;line-height:1.6}
+    .hero-meta span{flex:0 1 auto;border-bottom:none}
   }
   @media (prefers-reduced-motion:reduce){
-    html{scroll-behavior:auto}
+    html{scroll-behavior:auto;scroll-snap-type:none}
     .pill,.phone,.featured-cover{transition:none}
   }
 
