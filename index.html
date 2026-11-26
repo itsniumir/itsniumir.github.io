@@ -9,392 +9,310 @@
 <title>Niusha Mirzaei, UGC Portfolio | @itsniumir</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;1,400&family=Marcellus&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Playfair+Display:ital,wght@1,500;1,600&family=Jost:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
 <style>
-
   :root{
-    --paper:#FFFFFF;
-    --paper-warm:#F5FBE6;
-    --white:#FFFFFF;
-    --ivory:#FFFFFF;
-    --ink:#111111;
-    --ink-soft:#333333;
-    --ink-faint:#6E6E73;
-    --bronze:#F4A6BB;
-    --bronze-deep:#B83E6E;
-    --bronze-light:#F9C9D6;
-    --bronze-pale:#EEF7D2;
-    --line:#F0D9C5;
-    --line-soft:#FDEBD9;
-    --grey:#F4FBEA;
-    --grey-2:#EDF7D6;
-    --charcoal:#F4A6BB;
-    --charcoal-2:#EE8CA6;
-    --lime:#D9F99D;
-    --lime-strong:#BEF264;
-    --peach:#FFD9BE;
-    --serif:"Marcellus", serif;
+    --cream:#FFF9F0;
+    --paper:#FFFDF8;
+    --blush:#FBE9EE;
+    --pink:#F4B8C9;
+    --pink-soft:#F9D3DE;
+    --pink-name:#EFA3BC;
+    --pink-deep:#C04A74;
+    --black:#181210;
+    --black-soft:#2A211C;
+    --ink-soft:#5A4A42;
+    --yellow:#FBE7A1;
+    --tan:#D8AC82;
+    --tan-deep:#A9743F;
+    --chunky:"Poppins", sans-serif;
+    --accent:"Playfair Display", serif;
     --sans:"Jost", sans-serif;
-    --shadow-sm:0 1px 0 rgba(17,17,17,.04), 0 8px 24px rgba(17,17,17,.05);
-    --shadow-md:0 2px 6px rgba(17,17,17,.06), 0 18px 40px rgba(17,17,17,.08);
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.7;font-size:15.5px;letter-spacing:.01em;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body{margin:0;background:var(--cream);color:var(--black);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
   img{display:block;max-width:100%}
   a{color:inherit}
   button,[role="button"]{min-height:2.25rem}
-  ::selection{background:var(--bronze-light);color:var(--ink)}
-  .wrap{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4.5vw,56px)}
+  ::selection{background:var(--pink);color:var(--black)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,4.5vw,52px)}
+  section{padding:clamp(64px,8vw,104px) 0;position:relative}
 
-  /* ---------- top bar : slim sticky agency nav ---------- */
-  .topbar{position:sticky;top:0;z-index:60;background:var(--charcoal);color:#111111;border-bottom:3px solid var(--lime-strong)}
-  .topbar-in{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0;height:58px}
-  .brandmark{font-family:var(--sans);font-weight:700;font-size:1.18rem;letter-spacing:.04em;text-decoration:none;white-space:nowrap;color:#111111;line-height:1;text-transform:uppercase}
-  .brandmark em{font-style:normal;color:var(--bronze-deep);font-weight:600;letter-spacing:.06em}
-  nav.mainnav{display:flex;gap:clamp(16px,2.8vw,36px);flex-wrap:wrap;justify-content:flex-end;align-items:center}
-  nav.mainnav a{font-family:var(--sans);font-size:.66rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:#333333;padding:8px 0;border-bottom:1px solid transparent}
-  nav.mainnav a:hover{color:#111111;border-bottom-color:var(--bronze-deep)}
+  /* scrapbook pieces */
+  .tape{position:absolute;width:96px;height:27px;background:rgba(244,184,201,.75);background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.22) 0 6px,transparent 6px 12px);transform:rotate(-5deg);z-index:5;box-shadow:0 1px 3px rgba(24,18,16,.08)}
+  .tape.yellow{background:rgba(251,231,161,.8)}
+  .clip{position:absolute;top:-24px;left:50%;transform:translateX(-50%);width:56px;height:42px;z-index:6;filter:drop-shadow(0 3px 4px rgba(24,18,16,.25))}
+  .polaroid{background:#fff;padding:10px 10px 36px;box-shadow:0 14px 30px rgba(24,18,16,.18);position:relative}
+  .polaroid img{width:100%;height:100%;object-fit:cover}
+  .accent{font-family:var(--accent);font-style:italic;font-weight:500;color:var(--pink-deep);font-size:clamp(1.15rem,2vw,1.4rem);margin:0}
+  .accent.on-dark{color:var(--pink-soft)}
+  h2.head{font-family:var(--chunky);font-weight:800;font-size:clamp(2.1rem,4.6vw,3.3rem);line-height:1.05;letter-spacing:-.01em;margin:8px 0 0;color:var(--black);text-wrap:balance}
+  h2.head .it{font-family:var(--accent);font-style:italic;font-weight:600;text-transform:none;letter-spacing:0;color:var(--pink-deep)}
+  h2.head .hl{background:var(--pink);padding:0 14px 4px;border-radius:6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .on-dark h2.head{color:#FFF6EC}
+  .on-dark h2.head .it{color:var(--pink)}
 
-  /* ---------- shared section furniture ---------- */
-  section{padding:clamp(52px,7vw,84px) 0}
-  .label{display:flex;align-items:center;gap:16px;font-family:var(--sans);font-size:.68rem;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--bronze-deep);margin:0 0 18px}
-  .label::before{content:"";height:1px;width:42px;background:var(--bronze);flex:0 0 auto}
-  .label::after{content:"";height:1px;flex:0 0 120px;background:var(--line);margin-left:4px}
-  .label.center{justify-content:center}
-  .label.center::before{content:"";height:1px;width:56px;background:var(--bronze)}
-  h2.title{font-family:var(--serif);font-weight:700;font-size:clamp(2.6rem,5.2vw,4rem);line-height:.95;letter-spacing:.01em;margin:0;color:var(--ink);text-transform:none}
-  h2.title em{font-style:normal;font-weight:400;color:var(--bronze-deep)}
-  .lede{color:var(--ink-soft);font-size:1rem;line-height:1.75;max-width:58ch}
+  /* top bar */
+  .topbar{position:sticky;top:0;z-index:60;background:var(--black);color:#FFF6EC}
+  .topbar-in{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:56px;padding-top:6px;padding-bottom:6px}
+  .brandmark{font-family:var(--chunky);font-weight:700;font-size:1rem;text-decoration:none;white-space:nowrap}
+  .brandmark em{font-style:normal;color:var(--pink)}
+  nav.mainnav{display:flex;gap:clamp(14px,2.6vw,32px);flex-wrap:wrap;justify-content:flex-end}
+  nav.mainnav a{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:10px 2px;color:#F3E4D8}
+  nav.mainnav a:hover{color:var(--pink)}
+  .pink-strip{height:10px;background:var(--pink)}
 
-  /* ---------- hero ---------- */
-  .hero{padding:clamp(56px,7vw,88px) 0 clamp(72px,9vw,110px);background:var(--paper);border-bottom:1px solid var(--line-soft)}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,88px);align-items:center}
-  .badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:0;padding:9px 16px 9px 14px;font-family:var(--sans);font-size:.65rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase}
-  .badge i{width:6px;height:6px;border-radius:0;background:var(--bronze);flex:0 0 auto;transform:rotate(45deg)}
-  .hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(4rem,9vw,7.2rem);line-height:.88;letter-spacing:.01em;margin:28px 0 0;text-transform:uppercase;color:var(--ink)}
-  .hero h1 em{font-style:normal;font-weight:400;text-transform:uppercase;color:var(--bronze-deep);letter-spacing:.01em}
-  .hero-role{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--ink);margin:26px 0 0;display:flex;align-items:center;gap:14px;flex-wrap:wrap;line-height:1.6}
-  .hero-role .dotsep{width:5px;height:5px;background:var(--bronze);flex:0 0 auto;transform:rotate(45deg);border-radius:0}
-  .hero-quote{font-family:var(--sans);font-style:italic;font-weight:600;font-size:clamp(1.15rem,2vw,1.35rem);line-height:1.35;color:#111111;margin:32px 0 0;max-width:38ch;border-left:2px solid var(--bronze);padding-left:22px}
-  .hero-sub{color:var(--ink-soft);font-size:.98rem;line-height:1.8;margin:24px 0 0;max-width:50ch;font-weight:400}
-  .hero-open{margin:18px 0 0;font-size:.92rem;font-weight:500;color:var(--ink);max-width:50ch;line-height:1.7}
-  .hero-meta{display:flex;gap:0;flex-wrap:wrap;width:fit-content;max-width:100%;margin-top:26px;border:1px solid var(--line)}
-  .hero-meta span{font-family:var(--sans);font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:11px 16px;color:var(--ink-soft);background:var(--white);border-right:1px solid var(--line-soft)}
-  .hero-meta span:last-child{border-right:none}
-  .pills{display:flex;flex-direction:column;gap:0;margin-top:32px;max-width:460px;border:1px solid var(--line);background:var(--white)}
-  .pill{display:flex;align-items:center;gap:16px;text-decoration:none;border-radius:0;padding:16px 20px;font-size:.95rem;min-height:64px;transition:background .18s ease}
-  .pill + .pill{border-top:1px solid var(--line-soft)}
-  .pill:hover{background:var(--paper-warm)}
-  .pill .dot{width:38px;height:38px;border-radius:0;display:grid;place-items:center;flex:0 0 auto;background:var(--charcoal);color:#111111}
-  .pill svg{width:17px;height:17px;fill:currentColor}
-  .pill small{display:block;font-family:var(--sans);font-size:.62rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;opacity:.75;line-height:1.3;margin-bottom:2px}
-  .pill b{font-family:var(--sans);font-weight:600;font-size:.92rem;line-height:1.3;letter-spacing:.02em}
-  .pill-grad{background:var(--charcoal);color:#111111}
-  .pill-grad .dot{background:var(--lime-strong);color:#111111}
-  .pill-grad:hover{background:#EE8CA6}
-  .pill-pale{background:var(--white);color:var(--ink);border:none}
-  .pill-pale .dot{background:var(--bronze-pale);color:var(--bronze-deep)}
-  .hero-photo{position:relative}
-  .hero-photo img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/4.6;border:1px solid var(--line);border-radius:0;box-shadow:none;filter:saturate(.92) contrast(1.02)}
+  /* hero */
+  .hero{background:var(--cream);padding-top:clamp(44px,6vw,72px);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,72px);align-items:center}
+  .hero-roles{font-size:.68rem;font-weight:600;letter-spacing:.15em;line-height:1.75;text-transform:uppercase;color:var(--ink-soft);margin:0;text-wrap:balance}
+  .hero h1{font-family:var(--chunky);font-weight:800;font-size:clamp(3.6rem,8.5vw,6.6rem);line-height:.95;letter-spacing:-.015em;margin:18px 0 0;color:var(--pink-name);text-shadow:3px 3px 0 rgba(24,18,16,.9)}
+  .hero-open{margin:26px 0 0;font-size:1.05rem;font-weight:500;max-width:36ch;text-wrap:balance}
+  .hero-chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+  .hero-chips span{background:#fff;border:1.5px solid var(--black);border-radius:999px;padding:7px 16px;font-size:.8rem;font-weight:600;letter-spacing:.06em}
+  .hero-collage{position:relative;min-height:520px}
+  .hero-main{position:absolute;left:0;top:26px;width:62%;aspect-ratio:3/3.9;border-radius:22px;overflow:visible}
+  .hero-main .frame{border-radius:22px;overflow:hidden;box-shadow:0 22px 44px rgba(24,18,16,.22);height:100%}
+  .hero-main img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+  .hero-polaroid{position:absolute;right:0;top:0;width:44%;aspect-ratio:3/3.4;transform:rotate(5deg)}
+  .hero-polaroid img{aspect-ratio:3/2.9}
+  .camcorder{position:absolute;right:2%;bottom:0;width:56%;background:#26211D;border-radius:16px;padding:12px 12px 10px;box-shadow:0 18px 36px rgba(24,18,16,.3);transform:rotate(-2deg)}
+  .cam-top{display:flex;align-items:center;gap:8px;padding:0 2px 8px;color:#F3E4D8;font-size:.62rem;font-weight:600;letter-spacing:.22em}
+  .rec-dot{width:9px;height:9px;border-radius:50%;background:#E5484D;flex:0 0 auto;animation:blink 1.6s infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+  .cam-screen{border-radius:8px;overflow:hidden;aspect-ratio:4/2.9}
+  .cam-screen img{width:100%;height:100%;object-fit:cover;object-position:center 28%}
+  .cam-btns{display:flex;gap:7px;padding-top:9px}
+  .cam-btns i{width:16px;height:16px;border-radius:50%;background:#4A4038;display:block}
+  .cam-btns i:first-child{background:var(--pink)}
 
-  /* ---------- about ---------- */
-  .about{background:var(--white);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
-  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,5vw,76px);align-items:start;margin-top:44px}
-  .about h3{font-family:var(--sans);font-style:italic;font-weight:600;font-size:1.5rem;margin:0;color:var(--bronze-deep)}
-  .about .big-name{font-family:var(--sans);font-weight:700;font-size:clamp(2.4rem,4.5vw,3.4rem);line-height:1;margin:6px 0 10px;text-transform:uppercase;letter-spacing:.02em}
-  .about p{color:var(--ink-soft);font-size:.98rem;line-height:1.8;margin:18px 0 0;font-weight:400}
-  .about p b{color:var(--ink);font-weight:600}
-  .about .audience{color:var(--ink);font-size:1.02rem;font-weight:500;line-height:1.7;border-left:2px solid var(--bronze);padding-left:18px}
-  .rooted{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--line-soft)}
-  .rooted li{color:var(--ink);font-weight:500;font-size:.95rem;display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line-soft);letter-spacing:.02em}
-  .about-photo{border-radius:0;overflow:hidden;box-shadow:none;border:1px solid var(--line)}
-  .about-photo img{width:100%;aspect-ratio:4/4.4;object-fit:cover;object-position:center 22%}
-  .about-photo-note{margin-top:14px;color:var(--ink-faint);text-align:left;font-family:var(--sans);font-style:italic;font-weight:600;font-size:1.15rem}
+  /* about */
+  .about{background:var(--paper)}
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,84px);align-items:center}
+  .clipboard{position:relative;background:#EFE3D2;border-radius:14px;padding:34px 22px 22px;box-shadow:0 18px 36px rgba(24,18,16,.14);transform:rotate(-1.5deg);max-width:420px}
+  .clipboard img{border-radius:8px;width:100%;aspect-ratio:4/4.3;object-fit:cover;object-position:center 25%}
+  .about-lines p{font-size:clamp(1.1rem,2vw,1.3rem);line-height:1.6;margin:16px 0 0;font-weight:500;max-width:44ch}
+  .about-lines p b{color:var(--pink-deep);font-weight:600}
 
-  /* ---------- my style ---------- */
-  .mystyle{background:var(--paper)}
-  .style-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,5vw,76px);align-items:center;margin-top:44px}
-  .mystyle p{color:var(--ink-soft);font-size:.98rem;line-height:1.8;margin:0 0 18px}
-  .mystyle p b{color:var(--ink);font-weight:600}
-  .sparkle-list{list-style:none;margin:28px 0;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
-  .sparkle-list li{font-family:var(--sans);font-size:.88rem;color:var(--ink);font-weight:500;letter-spacing:.04em;padding:14px 2px;border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:baseline;text-transform:none}
-  .sparkle-list li::before{content:"✦";color:var(--bronze);font-size:.9rem;font-weight:600}
-  .style-photo{border-radius:0;overflow:hidden;box-shadow:none;border:1px solid var(--line)}
-  .style-photo img{width:100%;aspect-ratio:4/4.5;object-fit:cover;object-position:center 32%}
+  /* my style */
+  .mystyle{background:var(--blush)}
+  .style-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,84px);align-items:center}
+  .chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+  .chips span{background:#fff;border-radius:999px;padding:11px 20px;font-weight:600;font-size:.95rem;box-shadow:0 6px 16px rgba(24,18,16,.08)}
+  .chips span:nth-child(odd){transform:rotate(-1.2deg)}
+  .chips span:nth-child(even){transform:rotate(1deg)}
+  .style-photo{position:relative;transform:rotate(2deg);max-width:440px;justify-self:end;width:100%}
+  .style-photo .polaroid img{aspect-ratio:4/4.2;object-position:center 30%}
 
-  /* ---------- featured ---------- */
-  .featured{background:var(--grey);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .featured-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(40px,5vw,76px);align-items:center}
-  .featured-cover{display:block;border-radius:0;overflow:hidden;position:relative;box-shadow:none;border:1px solid var(--ink);max-width:400px;transition:opacity .2s ease}
-  .featured-cover:hover{opacity:.96}
-  .featured-cover img{width:100%;aspect-ratio:9/16;object-fit:cover}
-  .play{position:absolute;inset:0;display:grid;place-items:center}
-  .play span{width:58px;height:58px;border-radius:50%;background:rgba(17,17,17,.72);border:1px solid rgba(255,255,255,.7);display:grid;place-items:center}
-  .play svg{width:20px;height:20px;fill:#FFFFFF;margin-left:3px}
-  .featured-desc{color:var(--ink-soft);font-size:1rem;line-height:1.8;margin:22px 0 0;max-width:56ch}
-  .featured-desc b{color:var(--ink);font-weight:600}
-  .stat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:32px}
-  .stat{background:var(--white);border:none;border-radius:0;padding:20px 6px 16px;text-align:center;box-shadow:none}
-  .stat b{display:block;font-family:var(--sans);font-weight:700;font-size:clamp(1.6rem,2.8vw,2.1rem);color:var(--ink);line-height:1}
-  .stat span{display:block;margin-top:8px;font-family:var(--sans);font-size:.62rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze-deep)}
-  .featured-points{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:14px}
-  .featured-points li{color:var(--ink-soft);font-size:.96rem;line-height:1.7;padding-left:26px;position:relative}
-  .featured-points li::before{content:"";position:absolute;left:0;top:10px;width:12px;height:1px;background:var(--bronze)}
-  .featured-points li b{color:var(--ink);font-weight:600}
-  .featured-watch{display:inline-block;margin-top:30px;font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);text-decoration:none;border:1px solid var(--ink);padding:13px 22px;background:var(--white)}
-  .featured-watch:hover{background:var(--ink);color:#FFFFFF}
+  /* why, black section */
+  .why{background:var(--black);color:#FFF6EC;overflow:hidden}
+  .why-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(36px,5vw,72px);align-items:center}
+  .why-line{color:#EAD9CB;font-size:1.05rem;line-height:1.7;margin:20px 0 0;max-width:40ch}
+  .why-reasons{margin-top:34px;display:flex;flex-direction:column;gap:0}
+  .why-reason{padding:18px 0;border-top:1px solid #3A2E27}
+  .why-reason:first-child{border-top:none;padding-top:4px}
+  .why-reason:last-child{padding-bottom:0}
+  .why-reason h3{font-family:var(--chunky);font-weight:700;font-size:1.02rem;line-height:1.3;margin:0;color:#FFF6EC;display:flex;align-items:center;gap:12px}
+  .why-reason h3 .dot{width:9px;height:9px;border-radius:50%;background:var(--pink);flex:0 0 auto}
+  .why-reason p{margin:6px 0 0 21px;color:#DCC8B8;font-size:.97rem;line-height:1.65;max-width:52ch}
+  .why-collage{position:relative;display:flex;align-items:center;justify-content:center}
+  .why-collage .polaroid{position:relative;width:min(92%,430px);transform:rotate(3deg)}
+  .why-collage .polaroid img{aspect-ratio:3/3.2}
 
-  /* ---------- brands ---------- */
-  .brands{background:var(--white);border-bottom:1px solid var(--line-soft)}
-  .brands-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
-  .logo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:1px;background:var(--line-soft);border:1px solid var(--line-soft);margin-top:48px}
-  .logo-badge{position:relative;background:var(--white);border:none;border-radius:0;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;padding:20px;overflow:hidden;transition:background .18s ease}
-  .logo-badge:hover{background:var(--paper-warm)}
-  .logo-badge img{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:auto;height:auto;max-width:calc(100% - 44px);max-height:calc(100% - 36px);object-fit:contain;filter:grayscale(.15)}
-  .logo-badge .wordmark{font-family:var(--sans);font-weight:700;font-size:1.5rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);padding-left:.22em}
-  .logo-badge .wordmark.long{font-size:clamp(.72rem,2vw,1rem);letter-spacing:.1em;padding-left:.1em;line-height:1.5;text-align:center}
-  .and-more{font-family:var(--sans);font-style:italic;font-weight:600;font-size:1.6rem;text-align:center;color:var(--ink-faint);margin:40px 0 0}
+  /* featured */
+  .featured{background:var(--cream)}
+  .featured-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(40px,6vw,84px);align-items:center}
+  .featured-cover{display:block;position:relative;transform:rotate(-2deg);max-width:360px;margin:0 auto;width:100%}
+  .featured-cover .polaroid img{aspect-ratio:9/13.5}
+  .play{position:absolute;inset:0;display:grid;place-items:center;z-index:4}
+  .play span{width:56px;height:56px;border-radius:50%;background:var(--pink);border:2px solid #fff;display:grid;place-items:center;box-shadow:0 8px 20px rgba(24,18,16,.3)}
+  .play svg{width:19px;height:19px;fill:var(--black);margin-left:3px}
+  .featured-desc{color:var(--ink-soft);font-size:1rem;line-height:1.7;margin:18px 0 0;max-width:52ch}
+  .featured-desc b{color:var(--black)}
+  .stat-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+  .stat{background:#fff;border-radius:16px;padding:16px 14px 12px;text-align:center;min-width:96px;flex:1;box-shadow:0 8px 20px rgba(24,18,16,.07)}
+  .stat:nth-child(odd){transform:rotate(-1deg)}
+  .stat:nth-child(even){transform:rotate(1deg)}
+  .stat b{display:block;font-family:var(--chunky);font-weight:800;font-size:1.35rem;line-height:1;color:var(--black)}
+  .stat span{display:block;margin-top:6px;font-size:.64rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--pink-deep)}
+  .featured-points{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:8px}
+  .featured-points li{color:var(--ink-soft);font-size:.98rem}
+  .featured-points li b{color:var(--black)}
+  .watch-btn{display:inline-block;margin-top:24px;background:var(--black);color:#FFF6EC;text-decoration:none;font-weight:600;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;padding:14px 24px;border-radius:999px;min-height:48px}
+  .watch-btn:hover{background:var(--pink-deep)}
 
-  /* ---------- sample works ---------- */
-  .work{background:var(--paper);border-top:1px solid var(--line-soft)}
-  .work-head{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;flex-wrap:wrap}
-  .work-note{max-width:420px;border-left:2px solid var(--bronze);padding-left:20px}
-  .work-note b{display:block;color:var(--bronze-deep);letter-spacing:.24em;font-family:var(--sans);font-size:.66rem;font-weight:600;text-transform:uppercase;margin-bottom:6px}
-  .work-note p{margin:0;color:var(--ink-soft);font-size:.92rem;line-height:1.7}
-  .cat-note{color:var(--ink-faint);font-family:var(--sans);font-style:italic;font-weight:600;font-size:1.2rem;margin:24px 0 0}
-  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 20px;margin-top:32px}
-  figure.card{margin:0}
-  .card a{text-decoration:none;display:block}
-  .phone{border-radius:0;overflow:hidden;position:relative;aspect-ratio:9/13.2;background:var(--grey-2);border:1px solid var(--line);transition:border-color .2s ease}
-  .phone img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
-  .phone .play span{width:48px;height:48px}
-  .phone .play svg{width:16px;height:16px}
-  .card:hover .phone{border-color:var(--ink)}
-  .card .cap{text-align:left;margin-top:12px;font-family:var(--sans);font-size:.84rem;color:var(--ink-soft);line-height:1.6;letter-spacing:.01em}
-  .card .cap b{color:var(--ink);font-weight:600}
+  /* video portfolio */
+  .work{background:var(--paper)}
+  .phone-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:34px 22px;margin-top:48px}
+  figure.vcard{margin:0}
+  .vcard a{text-decoration:none;display:block}
+  .phoneframe{background:var(--black);border-radius:32px;padding:9px;box-shadow:0 16px 32px rgba(24,18,16,.18);position:relative;transition:transform .2s ease}
+  .vcard:nth-child(odd) .phoneframe{transform:rotate(-.7deg)}
+  .vcard:nth-child(even) .phoneframe{transform:rotate(.7deg)}
+  .vcard:hover .phoneframe{transform:rotate(0) translateY(-4px)}
+  .phoneframe::before{content:"";position:absolute;top:16px;left:50%;transform:translateX(-50%);width:64px;height:7px;border-radius:99px;background:#3A322C;z-index:3}
+  .phoneframe .screen{border-radius:24px;overflow:hidden;position:relative;aspect-ratio:9/13.4;background:#EFE3D2}
+  .phoneframe .screen img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+  .phoneframe .screen img.cover-full{object-fit:contain;background:#171310}
+  .phoneframe .play span{width:46px;height:46px}
+  .phoneframe .play svg{width:15px;height:15px}
+  .vcard figcaption{text-align:center;margin-top:13px;font-size:.9rem;color:var(--ink-soft);line-height:1.5;padding:0 4px}
+  .vcard figcaption b{color:var(--black);font-weight:600}
 
-  /* ---------- in page video player ---------- */
-  .lightbox{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px}
-  .lightbox[hidden]{display:none}
-  .lightbox-backdrop{position:absolute;inset:0;background:rgba(17,17,17,.86)}
-  .lightbox-box{position:relative;width:min(400px,92vw);background:var(--charcoal);border:1px solid #EE8CA6;padding:14px;box-shadow:0 24px 60px rgba(0,0,0,.45)}
-  .lightbox-frame{width:100%;max-height:78vh;overflow-y:auto;background:#000;display:flex;justify-content:center;align-items:flex-start}
-  .lightbox-frame video{width:100%;height:auto;max-height:76vh;display:block;background:#000}
-  .lightbox-close{position:absolute;top:-16px;right:-16px;width:40px;height:40px;border-radius:50%;background:var(--bronze);color:#111111;border:1px solid #FFFFFF;font-size:1rem;line-height:1;cursor:pointer;display:grid;place-items:center;z-index:2}
-  .lightbox-close:hover{background:var(--bronze-deep);color:#FFFFFF}
+  /* brands */
+  .brands{background:var(--blush)}
+  .circle-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(14px,2.4vw,26px);margin-top:48px}
+  .circle{aspect-ratio:1;border-radius:50%;display:flex;align-items:center;justify-content:center;padding:16%;position:relative;box-shadow:0 10px 22px rgba(24,18,16,.09)}
+  .circle img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+  .circle .wm{font-family:var(--chunky);font-weight:700;text-align:center;line-height:1.25;font-size:clamp(.78rem,1.4vw,1rem);letter-spacing:.02em}
+  .circle .wm small{display:block;font-family:var(--accent);font-style:italic;font-weight:500;font-size:.82em;letter-spacing:0}
+  .circle--appia{padding:19%;overflow:hidden}
+  .circle--appia img{width:100%;height:100%;object-fit:contain}
+  .c-pink{background:var(--pink-soft)}
+  .c-cream{background:#fff}
+  .c-yellow{background:var(--yellow)}
+  .c-tan{background:var(--tan);color:#fff}
+  .c-black{background:var(--black);color:#FFF6EC}
+  .and-more{font-family:var(--accent);font-style:italic;font-size:1.3rem;text-align:center;color:var(--pink-deep);margin:38px 0 0}
 
-  /* ---------- vision ---------- */
-  .vision{background:var(--charcoal);color:#333333}
-  .vision .label{color:var(--bronze-deep)}
-  .vision h2.title{color:#111111}
-  .vision-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,76px);margin-top:48px}
-  .vision-col{border-top:2px solid var(--lime);padding-top:28px}
-  .vision h3{font-family:var(--sans);font-weight:700;font-size:2rem;margin:0 0 14px;color:#111111;letter-spacing:.02em}
-  .vision p{color:#333333;font-size:.98rem;line-height:1.8;margin:0;font-weight:400}
+  /* services */
+  .services{background:var(--cream)}
+  .svc-banner{margin-top:36px;background:var(--black);color:#FFF6EC;border-radius:16px;padding:20px 24px;text-align:center;position:relative;transform:rotate(-.5deg)}
+  .svc-banner b{font-family:var(--chunky);font-weight:700;font-size:clamp(1rem,2vw,1.25rem);letter-spacing:.02em}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:30px}
+  .svc-card{background:#fff;padding:10px 10px 18px;box-shadow:0 14px 28px rgba(24,18,16,.12);position:relative}
+  .svc-card:nth-child(odd){transform:rotate(-1.2deg)}
+  .svc-card:nth-child(even){transform:rotate(1.2deg)}
+  .svc-card img{width:100%;aspect-ratio:4/3.1;object-fit:cover;object-position:center 25%}
+  .svc-card h3{font-family:var(--chunky);font-weight:700;font-size:1.02rem;line-height:1.3;margin:14px 8px 2px;text-align:center}
+  .svc-card p{margin:0 8px;text-align:center;color:var(--pink-deep);font-family:var(--accent);font-style:italic;font-size:.98rem}
 
-  /* ---------- shop / codes ---------- */
-  .shop{background:var(--white)}
-  .shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:44px}
-  .shop-card{border:none;border-radius:0;padding:30px 28px;background:var(--white);box-shadow:none;display:flex;flex-direction:column;align-items:flex-start}
-  .shop-card h3{font-family:var(--sans);margin:0 0 10px;font-size:1.55rem;font-weight:700;line-height:1.1;color:var(--ink)}
-  .shop-card p{margin:0 0 20px;color:var(--ink-soft);font-size:.9rem;line-height:1.7}
-  .shop-card .spacer{flex:1}
-  .btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:12px 22px;border-radius:0;text-decoration:none;font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;cursor:pointer}
-  .btn-dark{background:var(--bronze);color:#111111;border:1px solid var(--bronze)}
-  .btn-dark:hover{background:var(--bronze-deep);border-color:var(--bronze-deep);color:#FFFFFF}
-  .btn-pink{background:transparent;color:var(--ink);border:1px solid var(--ink)}
-  .btn-pink:hover{background:var(--ink);color:#FFFFFF}
+  /* process */
+  .process{background:var(--paper)}
+  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:46px}
+  .step{background:var(--cream);border-radius:18px;padding:30px 22px 26px;text-align:center;position:relative;box-shadow:0 10px 24px rgba(24,18,16,.07)}
+  .step .icon{width:58px;height:58px;margin:0 auto 16px;border-radius:50%;background:var(--pink-soft);display:grid;place-items:center;color:var(--pink-deep)}
+  .step .icon svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .step h3{font-family:var(--chunky);font-weight:700;font-size:1.05rem;line-height:1.3;margin:0}
+
+  /* links and codes */
+  .shop{background:var(--blush)}
+  .shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+  .note{background:#fff;border-radius:6px;padding:26px 24px 24px;position:relative;box-shadow:0 12px 26px rgba(24,18,16,.1);display:flex;flex-direction:column}
+  .note:nth-child(odd){transform:rotate(-.8deg)}
+  .note:nth-child(even){transform:rotate(.8deg)}
+  .note h3{font-family:var(--chunky);font-weight:700;font-size:1.15rem;margin:6px 0 6px;line-height:1.25}
+  .note p{margin:0 0 18px;color:var(--ink-soft);font-size:.92rem;line-height:1.6}
+  .note .spacer{flex:1}
+  .btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:11px 20px;border-radius:999px;text-decoration:none;font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;background:var(--black);color:#FFF6EC;border:none}
+  .btn:hover{background:var(--pink-deep)}
+  .btn.light{background:#fff;color:var(--black);border:1.5px solid var(--black)}
+  .btn.light:hover{background:var(--pink-soft)}
   .code-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  .code-chip{font-family:var(--sans);font-weight:600;letter-spacing:.14em;border:1px solid var(--bronze);color:var(--bronze-deep);border-radius:0;padding:10px 14px;font-size:.86rem;background:var(--bronze-pale)}
-  .code-row button{background:var(--bronze);color:#111111;border:1px solid var(--bronze);border-radius:0;padding:11px 18px;font-family:var(--sans);font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;min-height:44px;cursor:pointer}
-  .code-row button:hover{background:var(--bronze-deep);border-color:var(--bronze-deep);color:#FFFFFF}
-  .copy-msg{font-family:var(--sans);font-size:.82rem;font-weight:500;color:var(--bronze-deep);min-height:1.2em;margin:10px 0 0 !important}
+  .code-chip{font-weight:600;letter-spacing:.12em;border:1.5px dashed var(--pink-deep);color:var(--pink-deep);border-radius:10px;padding:9px 14px;font-size:.9rem;background:var(--blush)}
+  .code-row button{background:var(--black);color:#FFF6EC;border:none;border-radius:999px;padding:11px 18px;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;min-height:44px;cursor:pointer}
+  .code-row button:hover{background:var(--pink-deep)}
+  .copy-msg{font-size:.85rem;font-weight:500;color:var(--pink-deep);min-height:1.2em;margin:10px 0 0 !important}
+  .social-row{display:flex;gap:8px;flex-wrap:wrap}
 
-  /* ---------- services ---------- */
-  .services{background:var(--paper-warm);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .services .label{color:var(--bronze-deep)}
-  .svc-tag{font-family:var(--sans);font-style:italic;font-weight:600;font-size:clamp(1.4rem,2.8vw,1.9rem);line-height:1.35;color:#111111;margin:20px 0 0;max-width:54ch}
-  .svc-banner{display:block;margin:36px 0 0;background:var(--charcoal);border:1px solid var(--charcoal);border-radius:0;padding:18px 22px;font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:#111111;text-align:center;box-shadow:none}
-  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-top:none;margin-top:0}
-  .svc-box{background:var(--white);border:none;border-radius:0;padding:26px 18px;font-family:var(--sans);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ink);display:grid;place-items:center;text-align:center;min-height:96px;line-height:1.6}
-  .svc-note{margin:30px 0 0;max-width:660px;color:var(--ink-soft);font-size:.95rem;line-height:1.75}
-
-  /* ---------- process ---------- */
-  .process{background:var(--white)}
-  .process-sub{color:var(--ink-soft);font-family:var(--sans);font-style:italic;font-weight:600;font-size:1.35rem;line-height:1.4;margin:20px 0 0;max-width:56ch}
-  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:48px}
-  .process-card{border:none;border-radius:0;background:var(--white);box-shadow:none;padding:32px 26px 30px;display:flex;flex-direction:column}
-  .process-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
-  .process-icon{width:52px;height:52px;border-radius:0;background:transparent;border:1px solid var(--line);display:grid;place-items:center;color:var(--bronze-deep)}
-  .process-icon svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-  .process-num{font-family:var(--sans);font-style:italic;font-weight:600;font-size:1.4rem;color:var(--bronze-light)}
-  .process-card h3{font-family:var(--sans);font-size:1.45rem;font-weight:700;margin:0 0 10px;line-height:1.1;color:var(--ink)}
-  .process-card p{margin:0;color:var(--ink-soft);font-size:.9rem;line-height:1.75}
-
-  /* ---------- closing ---------- */
-  footer.closing-sec{background:var(--charcoal);color:#333333;padding:clamp(72px,9vw,110px) 0 40px;border-top:6px solid var(--lime-strong)}
-  .closing{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(40px,5vw,76px);align-items:start}
-  .closing h2{font-family:var(--serif);font-weight:700;text-transform:uppercase;font-size:clamp(3.4rem,8.5vw,6.8rem);line-height:.9;letter-spacing:.01em;margin:0;color:#111111}
+  /* closing */
+  footer.closing-sec{background:var(--black);color:#EAD9CB;padding:clamp(64px,8vw,100px) 0 38px}
+  .closing{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(40px,6vw,80px);align-items:center}
+  .closing h2{font-family:var(--chunky);font-weight:800;font-size:clamp(2.8rem,7vw,5.2rem);line-height:1;color:#FFF6EC;margin:0}
   .closing h2 span{display:block}
-  .closing h2 em{font-style:normal;font-weight:400;text-transform:uppercase;color:var(--bronze-deep)}
-  .closing-side{display:flex;flex-direction:column;gap:20px;padding-top:8px}
-  .closing-id{display:flex;align-items:center;gap:20px;padding-bottom:20px;border-bottom:1px solid #EE8CA6}
-  .closing-id img{width:96px;height:96px;object-fit:cover;object-position:center 30%;border-radius:0;flex:0 0 auto;border:1px solid #EE8CA6}
-  .closing-name{font-family:var(--sans);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:1.6rem;line-height:1.1;margin:0;color:#111111}
-  .closing-details{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-family:var(--sans);font-size:.92rem;color:#333333;letter-spacing:.02em}
-  .closing-details a{text-decoration:none;color:#111111;border-bottom:1px solid var(--bronze-deep)}
-  .closing-details a:hover{color:var(--bronze-deep)}
-  .closing-note{color:#444444;margin:0;font-size:.92rem;line-height:1.7}
-  .foot-links{display:flex;gap:8px 28px;flex-wrap:wrap;margin-top:64px;border-top:1px solid #EE8CA6;padding-top:28px}
-  .foot-links a{padding:8px 0;font-family:var(--sans);font-size:.68rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:#333333}
-  .foot-links a:hover{color:#111111}
-  .foot-small{margin:20px 0 0;color:#6E3A4E;font-family:var(--sans);font-size:.78rem;letter-spacing:.06em}
-  .foot-music{margin:6px 0 0;color:#9A7284;font-family:var(--sans);font-size:.68rem;letter-spacing:.05em}
+  .closing h2 .pk{color:var(--pink)}
+  .closing-side{display:flex;flex-direction:column;gap:18px}
+  .closing-id{display:flex;align-items:center;gap:18px}
+  .closing-id .polaroid{padding:6px 6px 20px;transform:rotate(-3deg);flex:0 0 auto}
+  .closing-id .polaroid img{width:84px;height:84px;object-fit:cover;object-position:center 25%}
+  .closing-name{font-family:var(--chunky);font-weight:700;font-size:1.35rem;line-height:1.2;color:#FFF6EC;margin:0}
+  .closing-details{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:1rem}
+  .closing-details a{color:var(--pink);text-decoration:none;font-weight:600}
+  .closing-details a:hover{text-decoration:underline}
+  .closing-note{margin:0;font-size:.95rem;line-height:1.65;color:#CBB7A6}
+  .foot-links{display:flex;gap:8px 26px;flex-wrap:wrap;margin-top:56px;border-top:1px solid #3A2E27;padding-top:24px}
+  .foot-links a{padding:8px 0;font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:#EAD9CB}
+  .foot-links a:hover{color:var(--pink)}
+  .foot-small{margin:18px 0 0;color:#9A8474;font-size:.82rem}
+  .foot-music{margin:4px 0 0;color:#77655A;font-size:.72rem}
 
-  /* ---------- floating music button ---------- */
-  .music-btn{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom, 0px));z-index:90;width:48px;height:48px;min-height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.85);background:var(--bronze);color:#7A2447;cursor:pointer;display:grid;place-items:center;padding:0;box-shadow:0 6px 20px rgba(184,62,110,.28);transition:background .25s ease,transform .25s ease}
-  .music-btn:hover{background:var(--bronze-light);transform:translateY(-2px)}
-  .music-btn:focus-visible{outline:2px solid var(--bronze-deep);outline-offset:3px}
+  /* music button */
+  .music-btn{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom, 0px));z-index:90;width:50px;height:50px;min-height:50px;border-radius:50%;border:2px solid #fff;background:var(--pink);color:#7A2447;cursor:pointer;display:grid;place-items:center;padding:0;box-shadow:0 8px 22px rgba(24,18,16,.28)}
   .music-btn svg{width:22px;height:22px;display:block}
   .music-btn .icon-pause{display:none}
-  .music-btn.is-playing{background:var(--bronze-deep);color:#FFFFFF}
+  .music-btn.is-playing{background:var(--pink-deep);color:#fff}
   .music-btn.is-playing .icon-note{display:none}
   .music-btn.is-playing .icon-pause{display:block}
-  @media (max-width:640px){
-    .music-btn{right:16px;bottom:calc(16px + env(safe-area-inset-bottom, 0px));width:46px;height:46px;min-height:46px}
-  }
+
+  /* video lightbox */
+  .lightbox{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px}
+  .lightbox[hidden]{display:none}
+  .lightbox-backdrop{position:absolute;inset:0;background:rgba(24,18,16,.88)}
+  .lightbox-box{position:relative;width:min(400px,92vw);background:var(--black);border-radius:20px;padding:12px;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+  .lightbox-frame{width:100%;max-height:78vh;overflow:hidden;border-radius:12px;background:#000;display:flex;justify-content:center}
+  .lightbox-frame video{width:100%;height:auto;max-height:76vh;display:block;background:#000}
+  .lightbox-close{position:absolute;top:-14px;right:-14px;width:42px;height:42px;border-radius:50%;background:var(--pink);color:var(--black);border:2px solid #fff;font-size:1rem;cursor:pointer;display:grid;place-items:center;z-index:2}
 
   @media (max-width:1020px){
-    .cards{grid-template-columns:repeat(3,1fr)}
+    .phone-grid{grid-template-columns:repeat(3,1fr)}
+    .circle-grid{grid-template-columns:repeat(4,1fr)}
     .process-grid{grid-template-columns:1fr 1fr}
-    .shop-grid{grid-template-columns:1fr 1fr}
   }
   @media (max-width:860px){
-    /* ---- mobile slides: each section is one composed screen ---- */
     html{scroll-snap-type:y proximity}
-    body{font-size:15px}
-    section,footer.closing-sec{scroll-snap-align:start;scroll-margin-top:100px}
-    section{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:40px 0}
-    footer.closing-sec{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:48px 0 34px}
-    .label{font-size:.62rem;letter-spacing:.26em;margin-bottom:14px}
-    .label::after{flex-basis:48px}
-    h2.title{font-size:clamp(1.95rem,8.4vw,2.5rem);line-height:1}
-    .lede{font-size:.95rem}
-    .hero-grid,.about-grid,.vision-grid,.style-grid,.featured-grid,.closing{grid-template-columns:1fr}
-
-    /* compact top bar */
-    .topbar-in{height:auto;padding:10px 0;flex-direction:column;align-items:flex-start;gap:6px}
-    .brandmark{font-size:1rem}
-    nav.mainnav{justify-content:flex-start;gap:6px 14px}
-    nav.mainnav a{font-size:.6rem;letter-spacing:.16em;padding:4px 0}
-
-    /* hero slide: photo, name, role and intro together on the first screen */
-    .hero{min-height:calc(100vh - 100px);min-height:calc(100svh - 100px);padding:18px 0 22px}
-    .hero-grid{display:flex;flex-direction:column;gap:14px}
-    .hero-photo{order:-1;max-width:124px;margin:0 auto}
-    .hero h1{font-size:clamp(2.5rem,12vw,2.9rem);line-height:.92;margin:0;text-align:center}
-    .hero-role{font-size:.62rem;letter-spacing:.2em;margin-top:12px;justify-content:center;text-align:center}
-    .hero-quote{font-size:1.02rem;line-height:1.4;margin-top:16px;padding-left:16px}
-    .hero-sub{font-size:.9rem;line-height:1.6;margin-top:12px}
-    .hero-open{font-size:.86rem;line-height:1.55;margin-top:10px}
-    .hero-meta{margin-top:14px}
-    .hero-meta span{font-size:.6rem;letter-spacing:.12em;padding:9px 10px}
-    .pills{max-width:none;margin-top:14px}
-    .pill{min-height:52px;padding:10px 14px;gap:12px}
-    .pill .dot{width:32px;height:32px}
-    .pill b{font-size:.86rem}
-
-    /* about slide: photo kept with its text */
-    .about-grid{display:flex;flex-direction:column;gap:22px;margin-top:26px}
-    .about-grid>div:last-child{order:-1}
-    .about-photo img{aspect-ratio:4/3}
-    .about-photo-note{font-size:1rem;margin-top:10px}
-    .about .big-name{font-size:clamp(1.9rem,8.4vw,2.4rem)}
-    .about h3{font-size:1.25rem}
-    .about p{font-size:.93rem;line-height:1.7;margin-top:14px}
-
-    /* style slide: photo kept with its list */
-    .style-grid{display:flex;flex-direction:column;gap:22px;margin-top:26px}
-    .style-grid>div:last-child{order:-1}
-    .style-photo img{aspect-ratio:4/3}
-    .mystyle p{font-size:.93rem;line-height:1.7}
-    .sparkle-list{margin:20px 0}
-    .sparkle-list li{padding:11px 2px;font-size:.84rem}
-
-    /* featured slide: cover kept with its stats */
-    .featured-grid{gap:26px}
-    .featured-cover{margin:0 auto;max-width:225px}
-    .featured-desc{font-size:.94rem;line-height:1.7;margin-top:16px}
-    .stat-grid{grid-template-columns:repeat(3,1fr);margin-top:22px}
-    .stat{padding:14px 4px 11px}
-    .stat b{font-size:1.3rem}
-    .stat span{font-size:.55rem;letter-spacing:.14em;margin-top:6px}
-    .featured-points{margin-top:20px;gap:10px}
-    .featured-points li{font-size:.9rem}
-    .featured-watch{margin-top:22px;padding:11px 18px}
-
-    /* brands + sample works: tidy compact grids */
-    .logo-grid{margin-top:28px}
-    .and-more{font-size:1.3rem;margin-top:26px}
-    .work-note{max-width:none}
-    .cat-note{font-size:1.05rem;margin-top:18px}
-    .cards{margin-top:24px}
-
-    /* vision slide */
-    .vision-grid{gap:26px;margin-top:28px}
-    .vision-col{padding-top:20px}
-    .vision h3{font-size:1.55rem}
-    .vision p{font-size:.93rem;line-height:1.7}
-
-    /* shop slide */
-    .shop-grid{margin-top:28px}
-    .shop-card{padding:22px 20px}
-    .shop-card h3{font-size:1.3rem}
-
-    /* services slide: cards grouped 2 across */
+    section,footer.closing-sec{scroll-snap-align:start;scroll-margin-top:118px}
+    section{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:44px 0}
+    footer.closing-sec{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center}
+    .hero{min-height:calc(100svh - 66px);padding-top:26px;justify-content:flex-start}
+    .hero-roles{display:block}
+    .topbar-in{flex-direction:column;align-items:flex-start;gap:2px;padding-top:8px;padding-bottom:8px}
+    nav.mainnav{justify-content:flex-start;gap:4px 16px}
+    nav.mainnav a{padding:6px 0;font-size:.64rem}
+    .hero-grid,.about-grid,.style-grid,.why-grid,.featured-grid,.closing{grid-template-columns:1fr}
+    .hero h1{font-size:clamp(2.9rem,15vw,3.6rem);text-align:center}
+    .hero-roles{text-align:center;font-size:.64rem;letter-spacing:.16em}
+    .hero-open{text-align:center;margin-left:auto;margin-right:auto;font-size:.98rem}
+    .hero-chips{justify-content:center}
+    .hero-collage{min-height:0;display:flex;flex-direction:column;align-items:center;gap:18px;margin-top:8px}
+    .hero-main{position:relative;left:auto;top:auto;width:58%;max-width:248px}
+    .hero-polaroid{position:relative;right:auto;top:auto;width:52%;max-width:210px;margin-top:-56px;margin-left:auto}
+    .camcorder{position:relative;right:auto;bottom:auto;width:78%;max-width:320px;margin-top:-30px;margin-right:auto}
+    .clipboard{margin:0 auto}
+    .about-lines{text-align:center}
+    .about-lines p{margin-left:auto;margin-right:auto}
+    .style-photo{justify-self:center}
+    .chips{justify-content:center}
+    .why-collage{min-height:0;height:auto;margin-top:22px}
+    .why-collage .polaroid{width:min(78%,320px)}
+    .featured-cover{max-width:250px}
+    .stat-row{gap:8px}
+    .stat{min-width:30%;padding:13px 8px 10px}
+    .stat b{font-size:1.1rem}
     .svc-grid{grid-template-columns:1fr 1fr}
-    .svc-tag{font-size:1.22rem;margin-top:14px}
-    .svc-banner{margin-top:24px;padding:14px 16px;font-size:.66rem;letter-spacing:.2em}
-    .svc-box{min-height:78px;padding:16px 10px;font-size:.68rem;letter-spacing:.1em}
-    .svc-note{margin-top:22px;font-size:.9rem}
-
-    /* process slide */
-    .process-sub{font-size:1.12rem;margin-top:14px}
-    .process-grid{margin-top:28px}
-
-    /* closing slide */
-    .closing{gap:26px}
-    .closing h2{font-size:clamp(2.6rem,13vw,3.3rem)}
-    .closing-id img{width:76px;height:76px}
-    .closing-name{font-size:1.3rem}
-    .foot-links{margin-top:34px;padding-top:20px}
+    .shop-grid{grid-template-columns:1fr 1fr}
+    .circle-grid{gap:12px;margin-top:32px}
+    .phone-grid{margin-top:32px}
   }
   @media (max-width:600px){
-    .cards{grid-template-columns:repeat(2,1fr);gap:20px 12px}
-    .card .cap{font-size:.78rem;margin-top:9px}
+    .phone-grid{grid-template-columns:repeat(2,1fr);gap:24px 14px}
+    .circle-grid{grid-template-columns:repeat(3,1fr)}
+    .circle{padding:13%}
+    .circle .wm{font-size:.68rem}
+    .svc-grid{grid-template-columns:1fr 1fr;gap:16px}
+    .svc-card h3{font-size:.86rem}
+    .svc-card p{font-size:.86rem}
     .shop-grid{grid-template-columns:1fr}
-    .logo-grid{grid-template-columns:repeat(4,1fr)}
-    .logo-badge{padding:8px}
-    .logo-badge img{max-width:calc(100% - 14px);max-height:calc(100% - 12px)}
-    .logo-badge .wordmark{font-size:.95rem;letter-spacing:.14em;padding-left:.14em}
-    .logo-badge .wordmark.long{font-size:.58rem;letter-spacing:.06em;padding-left:.06em;line-height:1.4}
-    .logo-badge .wordmark[style]{font-size:.8rem !important;letter-spacing:.1em !important;padding-left:.1em !important}
-    .process-grid{grid-template-columns:1fr 1fr}
-    .process-card{padding:18px 14px 16px}
-    .process-top{margin-bottom:12px}
-    .process-icon{width:38px;height:38px}
-    .process-icon svg{width:18px;height:18px}
-    .process-num{font-size:1.05rem}
-    .process-card h3{font-size:1.08rem}
-    .process-card p{font-size:.8rem;line-height:1.6}
-    .hero-meta span{flex:0 1 auto;border-bottom:none}
+    .process-grid{grid-template-columns:1fr 1fr;gap:14px}
+    .step{padding:22px 14px 20px}
+    .step h3{font-size:.92rem}
+    .music-btn{right:16px;width:48px;height:48px;min-height:48px}
   }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto;scroll-snap-type:none}
-    .pill,.phone,.featured-cover{transition:none}
+    .rec-dot{animation:none}
+    .phoneframe,.vcard:hover .phoneframe{transition:none}
   }
-
 </style>
 </head>
 <body>
@@ -403,117 +321,259 @@
   <div class="wrap topbar-in">
     <a class="brandmark" href="#top">Niusha Mirzaei <em>@itsniumir</em></a>
     <nav class="mainnav" aria-label="Portfolio sections">
-      <a href="#about">About Me</a>
-      <a href="#style">My Style</a>
+      <a href="#about">About</a>
+      <a href="#work">Videos</a>
       <a href="#brands">Brands</a>
-      <a href="#work">Sample Works</a>
-      <a href="#process">How I Work</a>
+      <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
+  <div class="pink-strip" aria-hidden="true"></div>
 </header>
 
 <!-- HERO -->
-<section class="hero wrap" id="top">
-  <div class="hero-grid">
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
     <div>
-      <h1>Niusha<br /><em>Mirzaei</em></h1>
-      <p class="hero-role">CONTENT CREATOR, STORYTELLER, BEAUTY &amp; LIFESTYLE CREATOR</p>
-      <p class="hero-quote">&ldquo;Honest content speaks to people, and brands speak louder.&rdquo;</p>
-      <p class="hero-sub">I make soft and honest beauty and lifestyle content in English and Farsi, sharing everyday moments people stop for, watch and trust.</p>
+      <p class="hero-roles">Content Creator, Storyteller, Beauty &amp; Lifestyle Creator</p>
+      <h1>Niusha<br />Mirzaei</h1>
       <p class="hero-open">Vancouver based and open to remote, events and travel collaborations.</p>
-      <div class="hero-meta" aria-label="Quick facts">
-        <span>Vancouver, Canada</span>
-        <span>English &amp; Farsi</span>
-        <span>@itsniumir</span>
-      </div>
-      <div class="pills">
-        <a class="pill pill-grad" href="https://www.instagram.com/itsniumir/" target="_blank" rel="noopener">
-          <span class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8zm0-2.1a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6zm6.9-.3a1.24 1.24 0 1 1-2.48 0 1.24 1.24 0 0 1 2.48 0zM12 4.2c-2.5 0-2.8 0-3.8.06a5 5 0 0 0-1.7.32 3.4 3.4 0 0 0-2 2 5 5 0 0 0-.31 1.7C4.14 9.2 4.14 9.5 4.14 12s0 2.8.05 3.8c.03.6.14 1.16.32 1.7a3.4 3.4 0 0 0 2 2c.54.18 1.1.29 1.7.32 1 .05 1.3.05 3.8.05s2.8 0 3.8-.05a5 5 0 0 0 1.7-.32 3.4 3.4 0 0 0 2-2c.18-.54.29-1.1.32-1.7.05-1 .05-1.3.05-3.8s0-2.8-.05-3.8a5 5 0 0 0-.32-1.7 3.4 3.4 0 0 0-2-2 5 5 0 0 0-1.7-.32c-1-.05-1.3-.05-3.8-.05zM12 2c2.6 0 2.9 0 3.9.06 1 .04 1.5.2 1.9.36.5.2.9.43 1.3.82.39.4.62.8.82 1.3.16.4.32.94.36 1.9.06 1 .06 1.3.06 3.9s0 2.9-.06 3.9c-.04 1-.2 1.5-.36 1.9a4.8 4.8 0 0 1-2.12 2.12c-.4.16-.94.32-1.9.36-1 .06-1.3.06-3.9.06s-2.9 0-3.9-.06c-1-.04-1.5-.2-1.9-.36a4.8 4.8 0 0 1-2.12-2.12c-.16-.4-.32-.94-.36-1.9C2 14.9 2 14.6 2 12s0-2.9.06-3.9c.04-1 .2-1.5.36-1.9.2-.5.43-.9.82-1.3.4-.39.8-.62 1.3-.82.4-.16.94-.32 1.9-.36C9.1 2 9.4 2 12 2z"/></svg></span>
-          <span><small>Instagram, my home platform</small><b>@itsniumir</b></span>
-        </a>
-        <a class="pill pill-pale" href="mailto:niuugccreator@gmail.com">
-          <span class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm8 7.4L4.5 7h15L12 12.4z"/></svg></span>
-          <span><small>Collabs</small><b>niuugccreator@gmail.com</b></span>
-        </a>
-      </div>
     </div>
-    <div class="hero-photo">
-      <img fetchpriority="high" src="assets/efb86eca77.jpg" alt="Niusha Mirzaei smiling among pink flowers in a light green dress in Vancouver" />
+    <div class="hero-collage">
+      <div class="hero-main">
+        <svg class="clip" viewBox="0 0 60 44" aria-hidden="true"><path d="M19 22 C19 5 41 5 41 22" fill="none" stroke="#B9BDC0" stroke-width="5" stroke-linecap="round"/><rect x="7" y="20" width="46" height="19" rx="4" fill="#2B2320"/><circle cx="30" cy="11" r="4.5" fill="#D8DBDD" stroke="#9AA0A3" stroke-width="1.5"/></svg>
+        <div class="frame"><img fetchpriority="high" src="assets/4988373230.jpg" alt="Niusha in a long brown coat on a Vancouver street at night" /></div>
+      </div>
+      <div class="polaroid hero-polaroid">
+        <span class="tape" style="top:-12px;left:18px" aria-hidden="true"></span>
+        <img src="assets/600e293346.jpg" alt="Close up portrait of Niusha smiling" />
+      </div>
+      <div class="camcorder" aria-hidden="true">
+        <div class="cam-top"><span class="rec-dot"></span><span>REC</span></div>
+        <div class="cam-screen"><img src="assets/727b907784.jpg" alt="" style="object-position:center 50%" /></div>
+        <div class="cam-btns"><i></i><i></i><i></i><i></i></div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section class="about" id="about">
-  <div class="wrap">
-    <p class="label">About Me</p>
-    <h2 class="title">Hi <em>Brands!</em></h2>
-    <div class="about-grid">
-      <div>
-        <p>I am a Vancouver based creator helping Beauty, Skincare and Haircare brands connect with people through <b>honest reviews, simple tutorials and real everyday routines</b>. My content feels like a recommendation from a trusted friend, and it shows products solving real concerns in real life.</p>
-        <p>My style is <b>fresh, feminine and glowing</b>, with crystal clear visuals in every frame. I create in <b>English and Farsi</b>, so your product speaks to two audiences at once.</p>
-      </div>
-      <div>
-        <div class="about-photo">
-          <img decoding="async" src="assets/a3f8def874.jpg" alt="Niusha Mirzaei in an elegant yellow floral dress and tinted sunglasses, seated at a white piano in a restaurant lounge" />
-        </div>
-        <p class="about-photo-note">A warm hello from Vancouver, the face behind @itsniumir</p>
-      </div>
+  <div class="wrap about-grid">
+    <div class="clipboard">
+      <svg class="clip" viewBox="0 0 60 44" aria-hidden="true"><path d="M19 22 C19 5 41 5 41 22" fill="none" stroke="#B9BDC0" stroke-width="5" stroke-linecap="round"/><rect x="7" y="20" width="46" height="19" rx="4" fill="#2B2320"/><circle cx="30" cy="11" r="4.5" fill="#D8DBDD" stroke="#9AA0A3" stroke-width="1.5"/></svg>
+      <img src="assets/6d4a885cdb.jpg" alt="Niusha smiling with long wavy balayage hair" />
+    </div>
+    <div class="about-lines">
+      <p class="accent">let me introduce myself</p>
+      <h2 class="head">Hi, I&rsquo;m <span class="it">Niusha</span></h2>
+      <p>Beauty and lifestyle creator in Vancouver, sharing honest everyday moments.</p>
+      <p>I create in <b>English and Farsi</b> for beauty, skincare, haircare, fragrance, fashion and lifestyle brands.</p>
     </div>
   </div>
 </section>
 
 <!-- MY STYLE -->
 <section class="mystyle" id="style">
-  <div class="wrap">
-    <p class="label">My Style</p>
-    <h2 class="title">How I <em>create</em></h2>
-    <div class="style-grid">
-      <div>
-        <p>I make content that feels like a friend&rsquo;s recommendation, while driving real results for brands.</p>
-        <ul class="sparkle-list">
-          <li>Natural on camera presence</li>
-          <li>Storytelling that builds trust</li>
-          <li>Clean, aesthetic editing style</li>
-          <li>Relatable but conversion focused</li>
-          <li>Experienced across YouTube, TikTok &amp; IG</li>
-        </ul>
+  <div class="wrap style-grid">
+    <div>
+      <p class="accent">a little about</p>
+      <h2 class="head">My <span class="it">style</span></h2>
+      <div class="chips">
+        <span>Fresh, feminine and glowing aesthetic</span>
+        <span>Honest reviews, real everyday moments</span>
+        <span>English and Farsi content</span>
+        <span>Natural and confident on camera</span>
+        <span>Storytelling that builds trust</span>
+        <span>Crystal clear visuals, clean editing</span>
       </div>
-      <div class="style-photo">
-        <img decoding="async" src="assets/94973278ea.jpg" alt="Niusha Mirzaei smiling with gold under eye patches and a colourful headband, surrounded by numbuzin No.9 products" />
+    </div>
+    <div class="style-photo">
+      <div class="polaroid">
+        <span class="tape yellow" style="top:-12px;right:22px;transform:rotate(6deg)" aria-hidden="true"></span>
+        <img src="assets/03151de097.jpg" alt="Niusha with gold under eye patches surrounded by numbuzin products" />
       </div>
     </div>
   </div>
 </section>
 
-<!-- FEATURED POST (kept exactly as the source) -->
-<section class="featured" id="featured">
-  <div class="wrap">
-    <div class="featured-grid">
-      <div>
-        <a class="featured-cover" href="https://www.instagram.com/reel/Dd8Ukg_hjBA/" data-video="assets/88d5a360f6.mp4" data-poster="assets/9aea0985e8.jpg" target="_blank" rel="noopener" aria-label="Play Niusha's skincare favourites roundup video">
-          <img decoding="async" src="assets/9aea0985e8.jpg" alt="Instagram cover of Niusha's skincare favourites roundup, Best Korean Skincare, with Niusha and her favourite products from every category" />
-          <span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>
-        </a>
-      </div>
-      <div>
-        <p class="label">Featured Post</p>
-        <h2 class="title"><strong>The one that<br />TOOK OFF</strong></h2>
-        <p class="featured-desc">One of my most loved posts, a <b>skincare favourites roundup</b> where I compare my favourite product in each skincare category, and invite viewers to comment <b>&ldquo;link&rdquo;</b> to have the product links sent straight to them. Posted October 1, 2026.</p>
-        <div class="stat-grid" aria-label="Lifetime results for this post, as of November 24, 2026">
-          <div class="stat"><b>202,804</b><span>Views</span></div>
-          <div class="stat"><b>7,936</b><span>Saves</span></div>
-          <div class="stat"><b>4,125</b><span>Shares</span></div>
-          <div class="stat"><b>2,893</b><span>Likes</span></div>
-          <div class="stat"><b>250</b><span>Comments</span></div>
+<!-- WHY WORK WITH ME -->
+<section class="why on-dark">
+  <div class="wrap why-grid">
+    <div>
+      <p class="accent on-dark">did you know…</p>
+      <h2 class="head">Why work<br /><span class="it">with me?</span></h2>
+      <div class="why-reasons">
+        <div class="why-reason">
+          <h3><span class="dot" aria-hidden="true"></span> Honest reviews my audience trusts</h3>
+          <p>I only share products I truly use and love, so my recommendations land like a friend&rsquo;s advice, and my viewers act on them.</p>
         </div>
-        <ul class="featured-points">
-          <li><b>99.7% of its views came from non followers</b>, pure discovery, reaching far beyond my own audience.</li>
-          <li><b>Its saves (7,936) are nearly 3&times; its likes</b>, viewers bookmarked it as a shopping reference to come back to.</li>
-        </ul>
-        <a class="featured-watch" href="https://www.instagram.com/reel/Dd8Ukg_hjBA/" data-video="assets/88d5a360f6.mp4" data-poster="assets/9aea0985e8.jpg" target="_blank" rel="noopener">Watch the Reel &rarr;</a>
+        <div class="why-reason">
+          <h3><span class="dot" aria-hidden="true"></span> Storytelling, never forced ads</h3>
+          <p>Your product lives inside my real everyday routines and stories, so it feels natural on screen and easy to believe.</p>
+        </div>
+        <div class="why-reason">
+          <h3><span class="dot" aria-hidden="true"></span> Professional from brief to delivery</h3>
+          <p>I handle concept, filming, editing and captions myself, follow your brief closely, and deliver polished content on time.</p>
+        </div>
+        <div class="why-reason">
+          <h3><span class="dot" aria-hidden="true"></span> Vancouver based, open to the world</h3>
+          <p>Available for remote collaborations, events and travel, across beauty, skincare, haircare, fragrance, fashion and lifestyle.</p>
+        </div>
+        <div class="why-reason">
+          <h3><span class="dot" aria-hidden="true"></span> Two languages, two audiences</h3>
+          <p>Every video in English and Farsi, reaching an audience most brands cannot reach on their own.</p>
+        </div>
       </div>
+    </div>
+    <div class="why-collage">
+      <div class="polaroid">
+        <svg class="clip" viewBox="0 0 60 44" aria-hidden="true"><path d="M19 22 C19 5 41 5 41 22" fill="none" stroke="#B9BDC0" stroke-width="5" stroke-linecap="round"/><rect x="7" y="20" width="46" height="19" rx="4" fill="#2B2320"/><circle cx="30" cy="11" r="4.5" fill="#D8DBDD" stroke="#9AA0A3" stroke-width="1.5"/></svg>
+        <img src="assets/a3f8def874.jpg" alt="Niusha in a yellow floral dress seated at a white piano" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED POST -->
+<section class="featured" id="featured">
+  <div class="wrap featured-grid">
+    <div>
+      <a class="featured-cover" href="https://www.instagram.com/reel/Dd8Ukg_hjBA/" data-video="assets/88d5a360f6.mp4" data-poster="assets/9aea0985e8.jpg" target="_blank" rel="noopener" aria-label="Play my skincare favourites roundup video">
+        <span class="polaroid" style="display:block">
+          <span class="tape yellow" style="top:-12px;left:30px;transform:rotate(5deg)" aria-hidden="true"></span>
+          <img src="assets/9aea0985e8.jpg" alt="Cover of my skincare favourites roundup with my favourite products from every category" />
+        </span>
+        <span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>
+      </a>
+    </div>
+    <div>
+      <p class="accent">featured post</p>
+      <h2 class="head">The one that TOOK OFF</h2>
+      <p class="featured-desc">My <b>skincare favourites roundup</b>, one favourite in each category, with viewers commenting &ldquo;link&rdquo; to get the product links sent to them.</p>
+      <div class="stat-row" aria-label="Lifetime results for this post">
+        <div class="stat"><b>202,804</b><span>Views</span></div>
+        <div class="stat"><b>7,936</b><span>Saves</span></div>
+        <div class="stat"><b>4,125</b><span>Shares</span></div>
+        <div class="stat"><b>2,893</b><span>Likes</span></div>
+        <div class="stat"><b>250</b><span>Comments</span></div>
+      </div>
+      <ul class="featured-points">
+        <li><b>99.7% of its views came from non followers</b></li>
+        <li><b>Saves 7,936, nearly three times its likes</b>, bookmarked as a shopping reference</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO PORTFOLIO -->
+<section class="work" id="work">
+  <div class="wrap">
+    <p class="accent" style="text-align:center">tap any phone to watch</p>
+    <h2 class="head" style="text-align:center">My video <span class="it">portfolio</span></h2>
+    <div class="phone-grid">
+      <figure class="vcard">
+        <a href="https://www.instagram.com/reel/DdlA-mdSURR/" data-video="assets/5185b7396e.mp4" data-poster="assets/919e0fd538.jpg" target="_blank" rel="noopener" aria-label="Play my numbuzin routine video">
+          <div class="phoneframe"><div class="screen"><img loading="lazy" src="assets/919e0fd538.jpg" alt="Me holding the numbuzin No.9 toner with the No.9 essence and eye cream" /><span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span></div></div>
+        </a>
+        <figcaption>Routine video for <b>numbuzin</b></figcaption>
+      </figure>
+      <figure class="vcard">
+        <a href="https://www.instagram.com/reel/Ddp8PsPhmnj/" data-video="assets/e919cddef0.mp4" data-poster="assets/d408e108e0.jpg" target="_blank" rel="noopener" aria-label="Play my medicube review video">
+          <div class="phoneframe"><div class="screen"><img loading="lazy" src="assets/d408e108e0.jpg" alt="Me holding a pink capsule cream jar toward the camera" /><span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span></div></div>
+        </a>
+        <figcaption>Review video for <b>medicube</b></figcaption>
+      </figure>
+      <figure class="vcard">
+        <a href="https://www.instagram.com/reel/Dd2-k-xBHlt/" data-video="assets/d19ed4d2b4.mp4" data-poster="assets/b95f3d8c7c.jpg" target="_blank" rel="noopener" aria-label="Play my Anua test video">
+          <div class="phoneframe"><div class="screen"><img loading="lazy" src="assets/b95f3d8c7c.jpg" alt="Me applying makeup with Anua serums and cream in front of me" /><span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span></div></div>
+        </a>
+        <figcaption>Test video for <b>Anua</b></figcaption>
+      </figure>
+      <figure class="vcard">
+        <a href="https://www.instagram.com/p/DeLcViuh9ee/" data-video="assets/5a1752375a.mp4" data-poster="assets/20ecd60a87.jpg" target="_blank" rel="noopener" aria-label="Play my eye cream guide video">
+          <div class="phoneframe"><div class="screen"><img loading="lazy" src="assets/20ecd60a87.jpg" alt="My eye cream guide with a table of eye cream products" /><span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span></div></div>
+        </a>
+        <figcaption>Eye cream guide, my pick for every concern</figcaption>
+      </figure>
+      <figure class="vcard">
+        <a href="https://www.instagram.com/reel/Dfpy49fTNTJ/" data-video="assets/ad97b85087.mp4" data-poster="assets/ce185ba981.jpg" target="_blank" rel="noopener" aria-label="Play my Arencia Eraser Shot trial review video">
+          <div class="phoneframe"><div class="screen"><img loading="lazy" src="assets/ce185ba981.jpg" alt="Me smiling and holding the Arencia Eraser Shot booster" /><span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span></div></div>
+        </a>
+        <figcaption>Trial review video for <b>Arencia</b>, Eraser Shot</figcaption>
+      </figure>
+      <figure class="vcard">
+        <a href="https://www.instagram.com/p/DeWEThdh3u9/" data-video="assets/1c5f0b8608.mp4" data-poster="assets/f8ba057e42.jpg" target="_blank" rel="noopener" aria-label="Play my Pandora bracelet cleaning video">
+          <div class="phoneframe"><div class="screen"><img loading="lazy" src="assets/f8ba057e42.jpg" alt="Me holding up my Pandora charm bracelet, sparkling clean" /><span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span></div></div>
+        </a>
+        <figcaption>Pandora cleaning, from tarnished to sparkling</figcaption>
+      </figure>
+      <figure class="vcard">
+        <a href="https://www.instagram.com/p/DdmVolIBQEk/" data-video="assets/8174a31420.mp4" data-poster="assets/5099923fb4.jpg" target="_blank" rel="noopener" aria-label="Play my numbuzin favourites video">
+          <div class="phoneframe"><div class="screen"><img loading="lazy" src="assets/5099923fb4.jpg" alt="Close up of me applying numbuzin eye serum under my eye" /><span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span></div></div>
+        </a>
+        <figcaption>My <b>numbuzin</b> favourites</figcaption>
+      </figure>
+      <figure class="vcard">
+        <a href="https://www.instagram.com/p/DdLI8FYBPaC/" data-video="assets/4ec41b91bc.mp4" data-poster="assets/94de7d38de.jpg" target="_blank" rel="noopener" aria-label="Play my Latest Scoop shopping day video">
+          <div class="phoneframe"><div class="screen"><img loading="lazy" src="assets/94de7d38de.jpg" alt="Me and two friends walking with shopping bags on Robson Street in Vancouver" /><span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span></div></div>
+        </a>
+        <figcaption>The Latest Scoop, new store shopping day</figcaption>
+      </figure>
+      <figure class="vcard">
+        <a href="https://www.instagram.com/p/Dek4r5FBR50/" data-video="assets/b8f0e5f181.mp4" data-poster="assets/c24bde5b20.jpg" target="_blank" rel="noopener" aria-label="Play my nail day video">
+          <div class="phoneframe"><div class="screen"><img loading="lazy" src="assets/c24bde5b20.jpg" alt="Close up of my fresh manicure, mauve nails with a dotted design" /><span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span></div></div>
+        </a>
+        <figcaption>My nail day</figcaption>
+      </figure>
+      <figure class="vcard">
+        <a href="https://www.instagram.com/reel/DdftOubBC6p/" data-video="assets/65ff2e8cc1.mp4" data-poster="assets/243c87c609.jpg" target="_blank" rel="noopener" aria-label="Play my favourite content tool video">
+          <div class="phoneframe"><div class="screen"><img loading="lazy" src="assets/243c87c609.jpg" alt="Me smiling with one of my favourite content creation tools" /><span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span></div></div>
+        </a>
+        <figcaption>One of my favourite content tools</figcaption>
+      </figure>
+      <figure class="vcard">
+        <a href="https://www.instagram.com/reel/DeTGCYthTHh/" data-video="assets/9274417fb8.mp4" data-poster="assets/2f7729bbf0.jpg" target="_blank" rel="noopener" aria-label="Play my hair balayage transformation video">
+          <div class="phoneframe"><div class="screen"><img loading="lazy" src="assets/2f7729bbf0.jpg" alt="Me smiling with my finished long wavy mocha balayage hair" /><span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span></div></div>
+        </a>
+        <figcaption>Transformation video, <b>mocha balayage</b></figcaption>
+      </figure>
+      <figure class="vcard">
+        <a href="https://www.instagram.com/reel/De515afhbPD/" data-video="assets/d366e41b60.mp4" data-poster="assets/57fbbf763a.jpg" target="_blank" rel="noopener" aria-label="Play my True Blings jewelry video">
+          <div class="phoneframe"><div class="screen"><img loading="lazy" src="assets/57fbbf763a.jpg" alt="Close up of me wearing a crystal necklace with yellow gemstone pendants" /><span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span></div></div>
+        </a>
+        <figcaption>Jewelry video for <b>True Blings</b></figcaption>
+      </figure>
+      <figure class="vcard">
+        <a href="https://www.instagram.com/p/De7X50SvHnp/" data-video="assets/0a596a9b46.mp4" data-poster="assets/9eeb47ecf7.jpg" target="_blank" rel="noopener" aria-label="Play my True Blings sunglasses try on video">
+          <div class="phoneframe"><div class="screen"><img loading="lazy" src="assets/9eeb47ecf7.jpg" alt="Me smiling in gold frame sunglasses inside the True Blings store" /><span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span></div></div>
+        </a>
+        <figcaption>Sunglasses try on for <b>True Blings</b></figcaption>
+      </figure>
+      <figure class="vcard">
+        <div>
+          <div class="phoneframe"><div class="screen"><img loading="lazy" src="assets/e47e9e4949.jpg" alt="Me in a cap, smiling and holding the red IM8 bottle" /></div></div>
+        </div>
+        <figcaption>Wellness video for <b>IM8</b></figcaption>
+      </figure>
+      <figure class="vcard">
+        <a href="https://www.instagram.com/p/Dfjf_nXgTtx/" data-video="assets/530cb13ad0.mp4" data-poster="assets/e4ba676dac.jpg" target="_blank" rel="noopener" aria-label="Play my GODA paid partnership video">
+          <div class="phoneframe"><div class="screen"><img loading="lazy" src="assets/e4ba676dac.jpg" alt="Me smiling and holding the GODA silk body oil bottle up to the camera" /><span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span></div></div>
+        </a>
+        <figcaption>Paid partnership with <b>GODA</b><br />UGC video for GODA</figcaption>
+      </figure>
+      <figure class="vcard">
+        <a href="https://www.instagram.com/p/DfzPN6AAByQ/" data-video="assets/1a8032450b.mp4" data-poster="assets/502e9ca415.jpg" target="_blank" rel="noopener" aria-label="Play my GODA fragrance video">
+          <div class="phoneframe"><div class="screen"><img loading="lazy" src="assets/502e9ca415.jpg" alt="Me smiling and holding a small black GODA dropper bottle up to the camera" /><span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span></div></div>
+        </a>
+        <figcaption>Fragrance video for <b>GODA</b> (paid partnership)<br />UGC video for GODA</figcaption>
+      </figure>
+      <figure class="vcard">
+        <a href="https://www.instagram.com/p/DgLBD3TA3A6/" data-video="assets/74e28192bd.mp4" data-poster="assets/cae7c5ec61.png" target="_blank" rel="noopener" aria-label="Play my Dr. Ceuracle Vegan Kombucha Tea Essence video">
+          <div class="phoneframe"><div class="screen"><img class="cover-full" loading="lazy" src="assets/cae7c5ec61.png" alt="Me holding the Dr. Ceuracle Vegan Kombucha Tea Essence bottle beside a glass of tea" /><span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span></div></div>
+        </a>
+        <figcaption>Dr. Ceuracle Vegan Kombucha Tea Essence</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -521,324 +581,170 @@
 <!-- BRANDS -->
 <section class="brands" id="brands">
   <div class="wrap">
-    <div class="brands-head">
-      <div>
-        <h2 class="title">Brands I have <em>worked with</em></h2>
-      </div>
-    </div>
-    <div class="logo-grid" aria-label="Brand logos, brands Niusha has worked with">
-      <div class="logo-badge"><img loading="lazy" decoding="async" src="assets/1cb92b1cf6.png" alt="YesStyle logo" /></div>
-      <div class="logo-badge"><img loading="lazy" decoding="async" src="assets/1e30af185c.png" alt="Arencia logo" /></div>
-      <div class="logo-badge"><img loading="lazy" decoding="async" src="assets/ee8fb0d5dd.png" alt="Stylevana logo" /></div>
-      <div class="logo-badge"><img loading="lazy" decoding="async" src="assets/e9878d6f7d.png" alt="Vessi logo" /></div>
-      <div class="logo-badge"><img loading="lazy" decoding="async" src="assets/3276d18158.png" alt="GODA logo" /></div>
-      <div class="logo-badge"><span class="wordmark" role="img" aria-label="Hala">Hala</span></div>
-      <div class="logo-badge"><img loading="lazy" decoding="async" src="assets/8888ed2b67.png" alt="True Blings logo" /></div>
-      <div class="logo-badge"><img loading="lazy" decoding="async" src="assets/53a6ad95c8.png" alt="EyeCandys logo" /></div>
-      <div class="logo-badge"><img loading="lazy" decoding="async" src="assets/b5c110bd96.png" alt="LumiDew logo" /></div>
-      <div class="logo-badge"><img loading="lazy" decoding="async" src="assets/297cf5bc30.png" alt="Joshua Perets logo" /></div>
-      <div class="logo-badge"><img loading="lazy" decoding="async" src="assets/b230b999e2.png" alt="Loving Silk Co logo" /></div>
-      <div class="logo-badge"><img loading="lazy" decoding="async" src="assets/e424681e86.png" alt="Fenvio logo" /></div>
-      <div class="logo-badge"><img loading="lazy" decoding="async" src="assets/adfc10201e.png" alt="Merlot Skin Care logo" /></div>
-      <div class="logo-badge"><img loading="lazy" decoding="async" src="assets/e54d9b8402.png" alt="Regen Labs logo" /></div>
-      <div class="logo-badge"><img loading="lazy" decoding="async" src="assets/c093c6f541.png" alt="RAWFACE logo" /></div>
-      <div class="logo-badge"><img loading="lazy" decoding="async" src="assets/77b8ee6b63.png" alt="Appia Luffa logo" /></div>
-      <div class="logo-badge"><img loading="lazy" decoding="async" src="assets/1ad3d06bbf.png" alt="burnd logo" /></div>
-      <div class="logo-badge"><img loading="lazy" decoding="async" src="assets/a764248733.png" alt="Luminance Milano logo" /></div>
-      <div class="logo-badge"><span class="wordmark long" role="img" aria-label="Apollonia Jewelry">Apollonia<br />Jewelry</span></div>
-      <div class="logo-badge"><img loading="lazy" decoding="async" src="assets/e5a7d325a1.png" alt="Garden Alchemy logo" /></div>
-      <div class="logo-badge"><span class="wordmark" style="font-size:1.2rem;letter-spacing:.18em;padding-left:.18em" role="img" aria-label="Trybe">Trybe</span></div>
-      <div class="logo-badge"><span class="wordmark long" role="img" aria-label="Obscented">Obscented</span></div>
-      <div class="logo-badge"><span class="wordmark long" role="img" aria-label="Ziploxx">Ziploxx</span></div>
-      <div class="logo-badge"><span class="wordmark long" role="img" aria-label="RallyMove">RallyMove</span></div>
-      <div class="logo-badge"><span class="wordmark long" role="img" aria-label="Evil Goods">Evil Goods</span></div>
-      <div class="logo-badge"><span class="wordmark long" role="img" aria-label="Qure Skincare">Qure Skincare</span></div>
-      <div class="logo-badge"><span class="wordmark long" role="img" aria-label="Derma Muse">Derma Muse</span></div>
+    <p class="accent">trusted by</p>
+    <h2 class="head"><span class="hl">Brands</span> I have worked with</h2>
+    <div class="circle-grid" aria-label="Brands I have worked with">
+      <div class="circle c-pink"><img loading="lazy" src="assets/99a8da13bf.png" alt="YesStyle logo" /></div>
+      <div class="circle c-cream"><img loading="lazy" src="assets/78d012c7c1.png" alt="Arencia logo" /></div>
+      <div class="circle c-yellow"><img loading="lazy" src="assets/12ac7e16c6.png" alt="Stylevana logo" /></div>
+      <div class="circle c-cream"><img loading="lazy" src="assets/c179fca4d5.png" alt="Vessi logo" /></div>
+      <div class="circle c-pink"><img loading="lazy" src="assets/0bfea73af9.png" alt="GODA logo" /></div>
+      <div class="circle c-black"><span class="wm" role="img" aria-label="Hala">Hala</span></div>
+      <div class="circle c-cream"><img loading="lazy" src="assets/f5f703662d.png" alt="True Blings logo" /></div>
+      <div class="circle c-yellow"><img loading="lazy" src="assets/efe29aeb94.png" alt="EyeCandys logo" /></div>
+      <div class="circle c-pink"><img loading="lazy" src="assets/7365fe57ce.png" alt="LumiDew logo" /></div>
+      <div class="circle c-cream"><img loading="lazy" src="assets/050e95017a.png" alt="Joshua Perets logo" /></div>
+      <div class="circle c-tan"><img loading="lazy" src="assets/aac96f7020.png" alt="Loving Silk Co logo" /></div>
+      <div class="circle c-pink"><img loading="lazy" src="assets/9f74d05c89.png" alt="Fenvio logo" /></div>
+      <div class="circle c-cream"><img loading="lazy" src="assets/7340396f37.png" alt="Merlot Skin Care logo" /></div>
+      <div class="circle c-yellow"><img loading="lazy" src="assets/f9b18e537b.png" alt="Regen Labs logo" /></div>
+      <div class="circle c-pink"><img loading="lazy" src="assets/9a42264db9.png" alt="RAWFACE logo" /></div>
+      <div class="circle c-cream circle--appia"><img loading="lazy" src="assets/e5b7a4a885.png" alt="Appia Luffa logo" /></div>
+      <div class="circle c-tan"><img loading="lazy" src="assets/2f5e23095e.png" alt="burnd logo" /></div>
+      <div class="circle c-pink"><img loading="lazy" src="assets/a764248733.png" alt="Luminance Milano logo" /></div>
+      <div class="circle c-black"><span class="wm" role="img" aria-label="Apollonia Jewelry">Apollonia<small>Jewelry</small></span></div>
+      <div class="circle c-cream"><img loading="lazy" src="assets/5ecff5a9be.png" alt="Garden Alchemy logo" /></div>
+      <div class="circle c-black"><span class="wm" role="img" aria-label="Trybe">Trybe</span></div>
+      <div class="circle c-yellow"><span class="wm" role="img" aria-label="Obscented" style="color:var(--tan-deep)">Obscented</span></div>
+      <div class="circle c-pink"><span class="wm" role="img" aria-label="RallyMove">RallyMove</span></div>
+      <div class="circle c-black"><span class="wm" role="img" aria-label="Evil Goods">Evil Goods</span></div>
+      <div class="circle c-cream"><span class="wm" role="img" aria-label="Qure Skincare" style="color:var(--black)">Qure<small>Skincare</small></span></div>
+      <div class="circle c-black"><span class="wm" role="img" aria-label="Derma Muse">Derma Muse</span></div>
+      <div class="circle c-pink"><span class="wm" role="img" aria-label="Scentora">Scentora</span></div>
+      <div class="circle c-cream"><span class="wm" role="img" aria-label="Bonjour Amour Beauty" style="color:var(--black)">Bonjour Amour<small>Beauty</small></span></div>
+      <div class="circle c-black"><span class="wm" role="img" aria-label="Nichegallerie">Nichegallerie</span></div>
+      <div class="circle c-yellow"><span class="wm" role="img" aria-label="Maybe Paris" style="color:var(--tan-deep)">Maybe<small>Paris</small></span></div>
+      <div class="circle c-tan"><span class="wm" role="img" aria-label="Urban Hydration">Urban<small>Hydration</small></span></div>
     </div>
     <p class="and-more">and more…</p>
-  </div>
-</section>
-
-<!-- SAMPLE WORKS -->
-<section class="work" id="work">
-  <div class="wrap">
-    <div class="work-head">
-      <div>
-        <p class="label">Sample Works</p>
-        <h2 class="title">Sample <em>works</em></h2>
-      </div>
-    </div>
-    <p class="cat-note">Tap any card to watch the video right here.</p>
-    <div class="cards">
-      <figure class="card">
-        <a href="https://www.instagram.com/reel/DdlA-mdSURR/" data-video="assets/5185b7396e.mp4" data-poster="assets/919e0fd538.jpg" target="_blank" rel="noopener" aria-label="Play Niusha's numbuzin routine video">
-          <div class="phone">
-            <img loading="lazy" decoding="async" src="assets/919e0fd538.jpg" alt="Instagram cover of Niusha's numbuzin routine Reel, Niusha holding the numbuzin No.9 NAD+ PDRN Glow Boosting Toner, with the No.9 lifting essence and eye cream in front of her" />
-            <span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>
-          </div>
-        </a>
-        <figcaption class="cap">Routine video for <b>numbuzin</b></figcaption>
-      </figure>
-      <figure class="card">
-        <a href="https://www.instagram.com/reel/Ddp8PsPhmnj/" data-video="assets/e919cddef0.mp4" data-poster="assets/d408e108e0.jpg" target="_blank" rel="noopener" aria-label="Play medicube review video">
-          <div class="phone">
-            <img loading="lazy" decoding="async" src="assets/d408e108e0.jpg" alt="Niusha holding a pink capsule cream jar toward the camera, medicube review cover" />
-            <span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>
-          </div>
-        </a>
-        <figcaption class="cap">Review video for <b>medicube</b></figcaption>
-      </figure>
-      <figure class="card">
-        <a href="https://www.instagram.com/reel/Dd2-k-xBHlt/" data-video="assets/d19ed4d2b4.mp4" data-poster="assets/b95f3d8c7c.jpg" target="_blank" rel="noopener" aria-label="Play Anua test video">
-          <div class="phone">
-            <img loading="lazy" decoding="async" src="assets/b95f3d8c7c.jpg" alt="Instagram cover of Niusha's Anua Reel, Niusha with contour guide lines drawn on her face, applying makeup, with Anua serums, PDRN hyaluronic cream and hydrating mist in front of her" />
-            <span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>
-          </div>
-        </a>
-        <figcaption class="cap">Test video for <b>Anua</b></figcaption>
-      </figure>
-      <figure class="card">
-        <a href="https://www.instagram.com/p/DeLcViuh9ee/" data-video="assets/5a1752375a.mp4" data-poster="assets/20ecd60a87.jpg" target="_blank" rel="noopener" aria-label="Play Niusha's eye cream guide video">
-          <div class="phone">
-            <img loading="lazy" decoding="async" src="assets/20ecd60a87.jpg" alt="Instagram cover of Niusha's eye cream guide, 'Best Eye creams' title with Niusha and a friend at a table of eye cream products in front of bright city windows" />
-            <span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>
-          </div>
-        </a>
-        <figcaption class="cap">Eye cream guide, my pick for every concern</figcaption>
-      </figure>
-      <figure class="card">
-        <a href="https://www.instagram.com/reel/Dfpy49fTNTJ/" data-video="assets/ad97b85087.mp4" data-poster="assets/ce185ba981.jpg" target="_blank" rel="noopener" aria-label="Play Arencia Eraser Shot trial review video">
-          <div class="phone">
-            <img loading="lazy" decoding="async" src="assets/ce185ba981.jpg" alt="Instagram cover of Niusha's Arencia Eraser Shot trial Reel, Niusha smiling and holding the Eraser Shot Glycolic Acid Booster tube, with 'Eraser Shot' and 'my honest review' on the cover" />
-            <span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>
-          </div>
-        </a>
-        <figcaption class="cap">Trial review video for <b>Arencia</b>, Eraser Shot</figcaption>
-      </figure>
-      <figure class="card">
-        <a href="https://www.instagram.com/p/DeWEThdh3u9/" data-video="assets/1c5f0b8608.mp4" data-poster="assets/f8ba057e42.jpg" target="_blank" rel="noopener" aria-label="Play Niusha's Pandora bracelet cleaning video">
-          <div class="phone">
-            <img loading="lazy" decoding="async" src="assets/f8ba057e42.jpg" alt="Instagram cover of Niusha's Pandora cleaning video, Niusha holding up her Pandora charm bracelet, sparkling clean" />
-            <span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>
-          </div>
-        </a>
-        <figcaption class="cap">Pandora cleaning, from tarnished to sparkling</figcaption>
-      </figure>
-      <figure class="card">
-        <a href="https://www.instagram.com/p/DdmVolIBQEk/" data-video="assets/8174a31420.mp4" data-poster="assets/5099923fb4.jpg" target="_blank" rel="noopener" aria-label="Play Niusha's numbuzin favourites video">
-          <div class="phone">
-            <img loading="lazy" decoding="async" src="assets/5099923fb4.jpg" alt="Instagram cover of Niusha's numbuzin favourites video, close up of Niusha applying numbuzin Retinal Collagen eye serum under her eye" />
-            <span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>
-          </div>
-        </a>
-        <figcaption class="cap">My <b>numbuzin</b> favourites</figcaption>
-      </figure>
-      <figure class="card">
-        <a href="https://www.instagram.com/p/DdLI8FYBPaC/" data-video="assets/4ec41b91bc.mp4" data-poster="assets/94de7d38de.jpg" target="_blank" rel="noopener" aria-label="Play Niusha's The Latest Scoop shopping day video">
-          <div class="phone">
-            <img loading="lazy" decoding="async" src="assets/94de7d38de.jpg" alt="Instagram cover of Niusha's Latest Scoop shopping day, Niusha and two friends walking with shopping bags on Robson Street in Vancouver" />
-            <span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>
-          </div>
-        </a>
-        <figcaption class="cap">The Latest Scoop, new store shopping day</figcaption>
-      </figure>
-      <figure class="card">
-        <a href="https://www.instagram.com/p/Dek4r5FBR50/" data-video="assets/b8f0e5f181.mp4" data-poster="assets/c24bde5b20.jpg" target="_blank" rel="noopener" aria-label="Play Niusha's nail day video">
-          <div class="phone">
-            <img loading="lazy" decoding="async" src="assets/c24bde5b20.jpg" alt="Instagram cover of Niusha's nail day post, close up of Niusha's fresh manicure, mauve nails with a dotted design, smiling behind her hands" />
-            <span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>
-          </div>
-        </a>
-        <figcaption class="cap">My nail day</figcaption>
-      </figure>
-      <figure class="card">
-        <a href="https://www.instagram.com/reel/DdftOubBC6p/" data-video="assets/65ff2e8cc1.mp4" data-poster="assets/243c87c609.jpg" target="_blank" rel="noopener" aria-label="Play Niusha's favourite content tool video">
-          <div class="phone">
-            <img loading="lazy" decoding="async" src="assets/243c87c609.jpg" alt="Instagram cover of Niusha's content tool Reel, Niusha and a friend smiling with the packages of one of her favourite content creation tools" />
-            <span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>
-          </div>
-        </a>
-        <figcaption class="cap">One of my favourite content tools</figcaption>
-      </figure>
-      <figure class="card">
-        <a href="https://www.instagram.com/reel/DeTGCYthTHh/" data-video="assets/9274417fb8.mp4" data-poster="assets/2f7729bbf0.jpg" target="_blank" rel="noopener" aria-label="Play hair balayage transformation video">
-          <div class="phone">
-            <img loading="lazy" decoding="async" src="assets/2f7729bbf0.jpg" alt="Instagram cover of Niusha's hair transformation Reel, Niusha smiling with her finished long, wavy mocha balayage hair" />
-            <span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>
-          </div>
-        </a>
-        <figcaption class="cap">Transformation video, <b>mocha balayage</b></figcaption>
-      </figure>
-      <figure class="card">
-        <a href="https://www.instagram.com/reel/De515afhbPD/" data-video="assets/d366e41b60.mp4" data-poster="assets/57fbbf763a.jpg" target="_blank" rel="noopener" aria-label="Play True Blings jewelry video">
-          <div class="phone">
-            <img loading="lazy" decoding="async" src="assets/57fbbf763a.jpg" alt="Instagram cover of Niusha's True Blings jewelry Reel, close up of Niusha wearing a crystal necklace with yellow gemstone pendants, a matching yellow gemstone earring and a tennis bracelet" />
-            <span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>
-          </div>
-        </a>
-        <figcaption class="cap">Jewelry video for <b>True Blings</b></figcaption>
-      </figure>
-      <figure class="card">
-        <a href="https://www.instagram.com/p/De7X50SvHnp/" data-video="assets/0a596a9b46.mp4" data-poster="assets/9eeb47ecf7.jpg" target="_blank" rel="noopener" aria-label="Play True Blings sunglasses try on video">
-          <div class="phone">
-            <img loading="lazy" decoding="async" src="assets/9eeb47ecf7.jpg" alt="Instagram cover of Niusha's True Blings sunglasses try on, Niusha smiling in gold frame sunglasses inside the True Blings store, with sunglasses displays behind her" />
-            <span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>
-          </div>
-        </a>
-        <figcaption class="cap">Sunglasses try on for <b>True Blings</b></figcaption>
-      </figure>
-      <figure class="card">
-        <a href="https://www.instagram.com/itsniumir/" target="_blank" rel="noopener" aria-label="See Niusha's IM8 wellness content on Instagram">
-          <div class="phone">
-            <img loading="lazy" decoding="async" src="assets/e47e9e4949.jpg" alt="Niusha in a cap, smiling and holding the red IM8 bottle" />
-            <span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>
-          </div>
-        </a>
-        <figcaption class="cap">Wellness video for <b>IM8</b></figcaption>
-      </figure>
-      <figure class="card">
-        <a href="https://www.instagram.com/p/Dfjf_nXgTtx/" data-video="assets/530cb13ad0.mp4" data-poster="assets/e7c9cef8f4.jpg" target="_blank" rel="noopener" aria-label="Play GODA paid partnership video">
-          <div class="phone">
-            <img loading="lazy" decoding="async" src="assets/e7c9cef8f4.jpg" alt="Instagram cover of Niusha's GODA paid partnership post, Niusha holding a GODA bottle up toward the camera" />
-            <span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>
-          </div>
-        </a>
-        <figcaption class="cap">Paid partnership with <b>GODA</b></figcaption>
-      </figure>
-      <figure class="card">
-        <a href="https://www.instagram.com/p/DfzPN6AAByQ/" data-video="assets/1a8032450b.mp4" data-poster="assets/8658039eec.jpg" target="_blank" rel="noopener" aria-label="Play GODA fragrance video">
-          <div class="phone">
-            <img loading="lazy" decoding="async" src="assets/8658039eec.jpg" alt="Instagram cover of Niusha's GODA fragrance video, Niusha talking to camera while holding a small GODA dropper bottle" />
-            <span class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span>
-          </div>
-        </a>
-        <figcaption class="cap">Fragrance video for <b>GODA</b> (paid partnership)</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- VISION AND MISSION -->
-<section class="vision">
-  <div class="wrap">
-    <p class="label" style="color:#B83E6E">Vision and Mission</p>
-    <h2 class="title" style="color:#111111">Why brands <em style="color:#B83E6E">work with me</em></h2>
-    <div class="vision-grid">
-      <div class="vision-col">
-        <h3>Vision</h3>
-        <p>I place products naturally inside real everyday moments, so brands feel relatable, desirable and trusted, never forced.</p>
-      </div>
-      <div class="vision-col">
-        <h3>Mission</h3>
-        <p>I share soft and honest videos in English and Farsi about what I try and what genuinely works.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LINKS AND CODES -->
-<section class="shop">
-  <div class="wrap">
-    <p class="label">Shop My Favourites</p>
-    <h2 class="title">Links &amp; <em>codes</em></h2>
-    <div class="shop-grid">
-      <div class="shop-card">
-        <h3>ShopMy</h3>
-        <p>Everything I use and love, all in one place.</p>
-        <span class="spacer"></span>
-        <a class="btn btn-dark" href="https://shopmy.us/shop?Curator_id=1215059&amp;Section_id=4634580" target="_blank" rel="noopener">Shop my shelf &rarr;</a>
-      </div>
-      <div class="shop-card">
-        <h3>Amazon Canada</h3>
-        <p>My Canadian storefront.</p>
-        <span class="spacer"></span>
-        <a class="btn btn-dark" href="https://a.co/d/03QAzkIw" target="_blank" rel="noopener">Amazon Canada &rarr;</a>
-      </div>
-      <div class="shop-card">
-        <h3>Amazon US</h3>
-        <p>My US storefront.</p>
-        <span class="spacer"></span>
-        <a class="btn btn-dark" href="https://a.co/d/0btu2mtM" target="_blank" rel="noopener">Amazon US &rarr;</a>
-      </div>
-      <div class="shop-card">
-        <h3>YesStyle: ITSNIU20</h3>
-        <p>My YesStyle code for an extra discount on your order.</p>
-        <span class="spacer"></span>
-        <div class="code-row">
-          <span class="code-chip">ITSNIU20</span>
-          <button type="button" data-copy="ITSNIU20">Copy code</button>
-        </div>
-        <p class="copy-msg" data-msg aria-live="polite"></p>
-      </div>
-      <div class="shop-card">
-        <h3>Stylevana: SV15NIUMIR</h3>
-        <p>My Stylevana code for my followers.</p>
-        <span class="spacer"></span>
-        <div class="code-row">
-          <span class="code-chip">SV15NIUMIR</span>
-          <button type="button" data-copy="SV15NIUMIR">Copy code</button>
-        </div>
-        <p class="copy-msg" data-msg aria-live="polite"></p>
-      </div>
-      <div class="shop-card">
-        <h3>YouTube, Facebook and TikTok</h3>
-        <p>Come say hi on my other platforms.</p>
-        <span class="spacer"></span>
-        <div class="code-row">
-          <a class="btn btn-pink" href="https://www.youtube.com/@itsniumir" target="_blank" rel="noopener">YouTube &rarr;</a>
-          <a class="btn btn-pink" href="https://www.facebook.com/itsniumir" target="_blank" rel="noopener">Facebook Page &rarr;</a>
-          <a class="btn btn-pink" href="https://www.tiktok.com/@itsniumir" target="_blank" rel="noopener">TikTok &rarr;</a>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="wrap">
-    <h2 class="title">Let&rsquo;s create <em>together!</em></h2>
-    <p class="svc-tag">I help brands tell stories that feel real.</p>
-    <span class="svc-banner">Concept Development and Creative Direction</span>
+    <p class="accent">what I offer</p>
+    <h2 class="head">My <span class="it">services</span></h2>
+    <div class="svc-banner"><span class="tape" style="top:-13px;left:34px" aria-hidden="true"></span><b>Concept Development and Creative Direction</b></div>
     <div class="svc-grid">
-      <div class="svc-box">UGC Videos (15 to 60 seconds)</div>
-      <div class="svc-box">Scripted Talking Head Videos</div>
-      <div class="svc-box">YouTube Brand Integrations</div>
-      <div class="svc-box">Product Demos and Testimonials</div>
-      <div class="svc-box">Lifestyle and Aesthetic B Roll</div>
-      <div class="svc-box">Ad Ready Edits for Paid Use</div>
+      <div class="svc-card">
+        <img loading="lazy" src="assets/cce06613f0.jpg" alt="Me holding a pink capsule skincare jar toward the camera" />
+        <h3>UGC Videos</h3>
+        <p>short form, made to stop the scroll</p>
+      </div>
+      <div class="svc-card">
+        <img loading="lazy" src="assets/b07e3c0bf2.jpg" alt="Me holding the COSRX 6 Peptide Skin Booster" />
+        <h3>Product Demos and Testimonials</h3>
+        <p>honest and clear</p>
+      </div>
+      <div class="svc-card">
+        <img loading="lazy" src="assets/0ec4c3b057.jpg" alt="Me smiling and holding GODA silk body oil" />
+        <h3>Scripted Talking Head Videos</h3>
+        <p>scripted, straight to camera</p>
+      </div>
+      <div class="svc-card">
+        <img loading="lazy" src="assets/4fe3938ddc.jpg" alt="Me walking in a denim outfit and brown boots" />
+        <h3>Lifestyle and Aesthetic B Roll</h3>
+        <p>soft everyday moments</p>
+      </div>
+      <div class="svc-card">
+        <img loading="lazy" src="assets/d718acfb92.jpg" alt="Me smiling and holding the red IM8 bottle" />
+        <h3>YouTube Brand Integrations</h3>
+        <p>longer form stories</p>
+      </div>
+      <div class="svc-card">
+        <img loading="lazy" src="assets/2dc83ef703.jpg" alt="Me in a burgundy dress and knee high boots by a window at night, full outfit from head to toe" />
+        <h3>Ad Ready Edits for Paid Use</h3>
+        <p>polished and ready to run</p>
+      </div>
     </div>
-    <p class="svc-note">Every package is tailored to your deliverables, usage rights and goals. Let us chat.</p>
   </div>
 </section>
 
 <!-- HOW WE WILL WORK TOGETHER -->
 <section class="process" id="process">
   <div class="wrap">
-    <p class="label">Work With Me</p>
-    <h2 class="title">How we&rsquo;ll <em>work together</em></h2>
-    <p class="process-sub">A simple and clear process, from first brief to final post.</p>
+    <p class="accent">work with me</p>
+    <h2 class="head">How we will <span class="it">work together</span></h2>
     <div class="process-grid">
-      <article class="process-card">
-        <div class="process-top"><span class="process-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span></div>
+      <article class="step">
+        <span class="tape" style="top:-12px;left:50%;margin-left:-48px" aria-hidden="true"></span>
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
         <h3>Getting Started</h3>
-        <p>Share your brief and goals, and I will send you a custom quote.</p>
       </article>
-      <article class="process-card">
-        <div class="process-top"><span class="process-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span></div>
+      <article class="step">
+        <span class="tape yellow" style="top:-12px;left:50%;margin-left:-48px;transform:rotate(4deg)" aria-hidden="true"></span>
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span>
         <h3>Discover &amp; Strategize</h3>
-        <p>We align on your goals, creative direction and key messaging.</p>
       </article>
-      <article class="process-card">
-        <div class="process-top"><span class="process-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></span></div>
+      <article class="step">
+        <span class="tape" style="top:-12px;left:50%;margin-left:-48px" aria-hidden="true"></span>
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></span>
         <h3>Create &amp; Review</h3>
-        <p>I film and edit, then share a first draft for your feedback.</p>
       </article>
-      <article class="process-card">
-        <div class="process-top"><span class="process-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span></div>
+      <article class="step">
+        <span class="tape yellow" style="top:-12px;left:50%;margin-left:-48px;transform:rotate(4deg)" aria-hidden="true"></span>
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span>
         <h3>Deliver &amp; Launch</h3>
-        <p>You receive final files, ready for organic or paid use.</p>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- LINKS AND CODES -->
+<section class="shop" id="shop">
+  <div class="wrap">
+    <p class="accent">shop my favourites</p>
+    <h2 class="head">links &amp; <span class="it">codes</span></h2>
+    <div class="shop-grid">
+      <div class="note">
+        <span class="tape" style="top:-12px;left:24px" aria-hidden="true"></span>
+        <h3>ShopMy</h3>
+        <p>Everything I use and love, all in one place.</p>
+        <span class="spacer"></span>
+        <a class="btn" href="https://shopmy.us/shop?Curator_id=1215059&amp;Section_id=4634580" target="_blank" rel="noopener">Shop my shelf</a>
+      </div>
+      <div class="note">
+        <span class="tape yellow" style="top:-12px;left:24px;transform:rotate(4deg)" aria-hidden="true"></span>
+        <h3>Amazon Canada</h3>
+        <p>My Canadian storefront.</p>
+        <span class="spacer"></span>
+        <a class="btn" href="https://a.co/d/03QAzkIw" target="_blank" rel="noopener">Amazon Canada</a>
+      </div>
+      <div class="note">
+        <span class="tape" style="top:-12px;left:24px" aria-hidden="true"></span>
+        <h3>Amazon US</h3>
+        <p>My US storefront.</p>
+        <span class="spacer"></span>
+        <a class="btn" href="https://a.co/d/0btu2mtM" target="_blank" rel="noopener">Amazon US</a>
+      </div>
+      <div class="note">
+        <span class="tape yellow" style="top:-12px;left:24px;transform:rotate(4deg)" aria-hidden="true"></span>
+        <h3>YesStyle</h3>
+        <p>My code for an extra discount on your order.</p>
+        <span class="spacer"></span>
+        <div class="code-row"><span class="code-chip">ITSNIU20</span><button type="button" data-copy="ITSNIU20">Copy code</button></div>
+        <p class="copy-msg" data-msg aria-live="polite"></p>
+      </div>
+      <div class="note">
+        <span class="tape" style="top:-12px;left:24px" aria-hidden="true"></span>
+        <h3>Stylevana</h3>
+        <p>My code for my followers.</p>
+        <span class="spacer"></span>
+        <div class="code-row"><span class="code-chip">SV15NIUMIR</span><button type="button" data-copy="SV15NIUMIR">Copy code</button></div>
+        <p class="copy-msg" data-msg aria-live="polite"></p>
+      </div>
+      <div class="note">
+        <span class="tape yellow" style="top:-12px;left:24px;transform:rotate(4deg)" aria-hidden="true"></span>
+        <h3>Find me here</h3>
+        <p>Come say hi on my other platforms.</p>
+        <span class="spacer"></span>
+        <div class="social-row">
+          <a class="btn light" href="https://www.youtube.com/@itsniumir" target="_blank" rel="noopener">YouTube</a>
+          <a class="btn light" href="https://www.facebook.com/itsniumir" target="_blank" rel="noopener">Facebook Page</a>
+          <a class="btn light" href="https://www.tiktok.com/@itsniumir" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -847,15 +753,15 @@
 <footer class="closing-sec" id="contact">
   <div class="wrap">
     <div class="closing">
-      <h2><span>Let&rsquo;s</span><span>Work</span><span><em>Together</em></span></h2>
+      <h2><span>Let&rsquo;s</span><span>Work</span><span class="pk">Together</span></h2>
       <div class="closing-side">
         <div class="closing-id">
-          <img loading="lazy" decoding="async" src="assets/efb86eca77.jpg" alt="Niusha Mirzaei smiling among pink flowers in a light green dress" />
+          <span class="polaroid"><img src="assets/efb86eca77.jpg" alt="Niusha smiling among pink flowers in a light green dress" /></span>
           <p class="closing-name">Niusha<br />Mirzaei</p>
         </div>
         <ul class="closing-details">
-          <li>( <a href="https://www.instagram.com/itsniumir/" target="_blank" rel="noopener">@itsniumir</a> )</li>
-          <li>( <a href="mailto:niuugccreator@gmail.com">niuugccreator@gmail.com</a> )</li>
+          <li><a href="https://www.instagram.com/itsniumir/" target="_blank" rel="noopener">@itsniumir</a></li>
+          <li><a href="mailto:niuugccreator@gmail.com">niuugccreator@gmail.com</a></li>
         </ul>
         <p class="closing-note">For collaborations, UGC and brand partnerships, I reply personally.</p>
       </div>
@@ -866,7 +772,7 @@
       <a href="https://www.tiktok.com/@itsniumir" target="_blank" rel="noopener">TikTok</a>
       <a href="https://shopmy.us/shop?Curator_id=1215059&amp;Section_id=4634580" target="_blank" rel="noopener">ShopMy</a>
       <a href="#about">About</a>
-      <a href="#work">Sample Works</a>
+      <a href="#work">Videos</a>
     </nav>
     <p class="foot-small">Niusha Mirzaei, Beauty and Lifestyle, Vancouver, Canada, English and Farsi</p>
     <p class="foot-music">Music: Gymnop&eacute;die No. 1, Kevin MacLeod (CC BY)</p>
@@ -951,30 +857,23 @@
   document.querySelectorAll("[data-copy]").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var code = btn.getAttribute("data-copy");
-      var card = btn.closest(".shop-card");
+      var card = btn.closest(".note");
       var msg = card ? card.querySelector("[data-msg]") : null;
       function done() {
-        if (msg) {
-          msg.textContent = "Copied " + code + " 🎀";
-          setTimeout(function () { msg.textContent = ""; }, 2600);
-        }
-        btn.textContent = "Copied ✓";
+        if (msg) { msg.textContent = "Copied " + code; setTimeout(function () { msg.textContent = ""; }, 2600); }
+        btn.textContent = "Copied";
         setTimeout(function () { btn.textContent = "Copy code"; }, 2600);
       }
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(code).then(done).catch(function () { fallback(); });
-      } else { fallback(); }
       function fallback() {
         var ta = document.createElement("textarea");
-        ta.value = code;
-        ta.style.position = "fixed"; ta.style.opacity = "0";
-        document.body.appendChild(ta);
-        ta.select();
-        try { document.execCommand("copy"); done(); } catch (e) {
-          if (msg) msg.textContent = "Code: " + code;
-        }
+        ta.value = code; ta.style.position = "fixed"; ta.style.opacity = "0";
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand("copy"); done(); } catch (e) { if (msg) msg.textContent = "Code: " + code; }
         document.body.removeChild(ta);
       }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(code).then(done).catch(fallback);
+      } else { fallback(); }
     });
   });
 </script>
@@ -985,8 +884,8 @@
     if (!audio || !btn) return;
     audio.volume = 0.35;
     var wasPlayingBeforeVideo = false;
-    var started = false;      /* music has played at least once */
-    var userPaused = false;   /* visitor chose silence with the button */
+    var started = false;
+    var userPaused = false;
     function sync() {
       var playing = !audio.paused;
       btn.classList.toggle("is-playing", playing);
@@ -994,48 +893,22 @@
       btn.setAttribute("aria-label", playing ? "Pause background music" : "Play background music");
       btn.title = playing ? "Pause music" : "Play music";
     }
-    function tryPlay() {
-      if (!audio.paused) return;
-      var p = audio.play();
-      if (p && p.catch) p.catch(function () {});
-    }
-    /* Start on the visitor's very first interaction if the browser blocked
-       the automatic start. Stops listening once the music has started, and
-       never overrides a pause the visitor chose with the button. */
+    function tryPlay() { if (!audio.paused) return; var p = audio.play(); if (p && p.catch) p.catch(function () {}); }
     function onFirstInteraction(e) {
       if (started || userPaused) { disarm(); return; }
-      if (e && e.target && btn.contains(e.target)) return; /* the button handles itself */
+      if (e && e.target && btn.contains(e.target)) return;
       tryPlay();
     }
-    function arm() {
-      ["pointerdown", "touchstart", "click", "keydown"].forEach(function (t) {
-        document.addEventListener(t, onFirstInteraction, { capture: true, passive: true });
-      });
-    }
-    function disarm() {
-      ["pointerdown", "touchstart", "click", "keydown"].forEach(function (t) {
-        document.removeEventListener(t, onFirstInteraction, { capture: true });
-      });
-    }
+    function arm() { ["pointerdown", "touchstart", "click", "keydown"].forEach(function (t) { document.addEventListener(t, onFirstInteraction, { capture: true, passive: true }); }); }
+    function disarm() { ["pointerdown", "touchstart", "click", "keydown"].forEach(function (t) { document.removeEventListener(t, onFirstInteraction, { capture: true }); }); }
     btn.addEventListener("click", function () {
-      if (audio.paused) {
-        userPaused = false;
-        tryPlay();
-      } else {
-        userPaused = true;
-        audio.pause();
-      }
+      if (audio.paused) { userPaused = false; tryPlay(); } else { userPaused = true; audio.pause(); }
     });
-    audio.addEventListener("play", function () {
-      started = true;
-      disarm();
-      sync();
-    });
+    audio.addEventListener("play", function () { started = true; disarm(); sync(); });
     audio.addEventListener("pause", sync);
     sync();
     arm();
-    tryPlay(); /* automatic start attempt on page load */
-    /* Pause the music while a Sample Works video is open; resume on close only if it was playing before. */
+    tryPlay();
     var lightbox = document.getElementById("videoLightbox");
     if (lightbox && window.MutationObserver) {
       new MutationObserver(function () {
