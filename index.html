@@ -259,54 +259,145 @@
     .circle-grid{grid-template-columns:repeat(4,1fr)}
     .process-grid{grid-template-columns:1fr 1fr}
   }
+  /* Mobile: every section stays a composed slide, like the desktop
+     PowerPoint layout — same side-by-side arrangement, same relative
+     positions, scaled down proportionally to fit one phone screen.
+     Nothing is restacked into a single column. The video grid and
+     brand wall keep their desktop column counts in neat rows and
+     may continue onto a second screen. */
   @media (max-width:860px){
     html{scroll-snap-type:y proximity}
-    section,footer.closing-sec{scroll-snap-align:start;scroll-margin-top:118px}
-    section{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:44px 0}
-    footer.closing-sec{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center}
-    .hero{min-height:calc(100svh - 66px);padding-top:26px;justify-content:flex-start}
-    .hero-roles{display:block}
-    .topbar-in{flex-direction:column;align-items:flex-start;gap:2px;padding-top:8px;padding-bottom:8px}
-    nav.mainnav{justify-content:flex-start;gap:4px 16px}
-    nav.mainnav a{padding:6px 0;font-size:.64rem}
-    .hero-grid,.about-grid,.style-grid,.why-grid,.featured-grid,.closing{grid-template-columns:1fr}
-    .hero h1{font-size:clamp(2.9rem,15vw,3.6rem);text-align:center}
-    .hero-roles{text-align:center;font-size:.64rem;letter-spacing:.16em}
-    .hero-open{text-align:center;margin-left:auto;margin-right:auto;font-size:.98rem}
-    .hero-chips{justify-content:center}
-    .hero-collage{min-height:0;display:flex;flex-direction:column;align-items:center;gap:18px;margin-top:8px}
-    .hero-main{position:relative;left:auto;top:auto;width:58%;max-width:248px}
-    .hero-polaroid{position:relative;right:auto;top:auto;width:52%;max-width:210px;margin-top:-56px;margin-left:auto}
-    .camcorder{position:relative;right:auto;bottom:auto;width:78%;max-width:320px;margin-top:-30px;margin-right:auto}
-    .clipboard{margin:0 auto}
-    .about-lines{text-align:center}
-    .about-lines p{margin-left:auto;margin-right:auto}
-    .style-photo{justify-self:center}
-    .chips{justify-content:center}
-    .why-collage{min-height:0;height:auto;margin-top:22px}
-    .why-collage .polaroid{width:min(78%,320px)}
-    .featured-cover{max-width:250px}
-    .stat-row{gap:8px}
-    .stat{min-width:30%;padding:13px 8px 10px}
-    .stat b{font-size:1.1rem}
-    .svc-grid{grid-template-columns:1fr 1fr}
-    .shop-grid{grid-template-columns:1fr 1fr}
-    .circle-grid{gap:12px;margin-top:32px}
-    .phone-grid{margin-top:32px}
+    section,footer.closing-sec{scroll-snap-align:start;scroll-margin-top:52px}
+    section{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:22px 0}
+    footer.closing-sec{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:22px 0 30px}
+    .wrap{padding:0 14px;width:100%}
+    /* top bar stays one row, like desktop */
+    .topbar-in{flex-direction:row;align-items:center;justify-content:space-between;gap:8px;flex-wrap:nowrap;min-height:42px;padding-top:4px;padding-bottom:4px}
+    .brandmark{font-size:.68rem}
+    nav.mainnav{justify-content:flex-end;gap:8px;flex-wrap:nowrap}
+    nav.mainnav a{padding:6px 0;font-size:.5rem;letter-spacing:.09em;white-space:nowrap}
+    .pink-strip{height:6px}
+    /* scaled-down slide typography */
+    .accent{font-size:.8rem}
+    h2.head{font-size:clamp(1.2rem,5.6vw,1.55rem);margin-top:4px;line-height:1.08}
+    h2.head .hl{padding:0 8px 2px;border-radius:4px}
+    .tape{width:52px;height:15px}
+    .clip{width:30px;height:23px;top:-13px}
+    .polaroid{padding:5px 5px 17px;box-shadow:0 8px 18px rgba(24,18,16,.16)}
+    /* all desktop two-column compositions stay side by side */
+    .hero-grid{grid-template-columns:1fr 1fr;gap:14px;align-items:center}
+    .about-grid{grid-template-columns:.9fr 1.1fr;gap:16px;align-items:center}
+    .style-grid{grid-template-columns:1.05fr .95fr;gap:16px;align-items:center}
+    .why-grid{grid-template-columns:1.12fr .88fr;gap:14px;align-items:center}
+    .featured-grid{grid-template-columns:.85fr 1.15fr;gap:16px;align-items:center}
+    .closing{grid-template-columns:1.15fr .85fr;gap:16px;align-items:center}
+    /* hero slide: text left, collage right, exactly as desktop */
+    .hero{min-height:calc(100svh - 48px);padding-top:16px}
+    .hero h1{font-size:clamp(1.85rem,10vw,2.5rem);text-align:left;margin-top:10px;text-shadow:2px 2px 0 rgba(24,18,16,.9)}
+    .hero-roles{display:block;text-align:left;font-size:.48rem;letter-spacing:.11em;line-height:1.65}
+    .hero-open{text-align:left;margin:12px 0 0;font-size:.76rem;line-height:1.5;max-width:30ch}
+    .hero-chips{justify-content:flex-start;gap:5px;margin-top:12px}
+    .hero-chips span{padding:4px 9px;font-size:.58rem}
+    .hero-collage{position:relative;min-height:290px;display:block}
+    .hero-main{position:absolute;left:0;top:16px;width:62%}
+    .hero-main .frame{border-radius:12px}
+    .hero-polaroid{position:absolute;right:0;top:0;width:44%}
+    .camcorder{position:absolute;right:2%;bottom:0;width:56%;padding:7px 7px 6px;border-radius:10px}
+    .cam-top{font-size:.5rem;padding-bottom:5px;gap:5px}
+    .rec-dot{width:6px;height:6px}
+    .cam-btns{gap:4px;padding-top:6px}
+    .cam-btns i{width:10px;height:10px}
+    /* about slide */
+    .clipboard{margin:0;max-width:none;padding:20px 10px 10px;border-radius:10px}
+    .about-lines{text-align:left}
+    .about-lines p{font-size:.78rem;line-height:1.55;margin-top:10px;max-width:none}
+    /* my style slide */
+    .chips{justify-content:flex-start;gap:6px;margin-top:14px}
+    .chips span{padding:6px 10px;font-size:.6rem;line-height:1.35;box-shadow:0 4px 10px rgba(24,18,16,.08)}
+    .style-photo{justify-self:end;max-width:none}
+    /* why slide */
+    .why-reasons{margin-top:12px}
+    .why-reason{padding:7px 0}
+    .why-reason h3{font-size:.7rem;gap:6px;line-height:1.3}
+    .why-reason h3 .dot{width:6px;height:6px}
+    .why-reason p{font-size:.64rem;line-height:1.48;margin:3px 0 0 12px;max-width:none}
+    .why-collage{min-height:0;height:auto;margin-top:0}
+    .why-collage .polaroid{width:100%}
+    /* featured slide */
+    .featured-cover{max-width:none;margin:0;width:100%}
+    .featured-cover .play span{width:38px;height:38px}
+    .featured-cover .play svg{width:13px;height:13px}
+    .featured-desc{font-size:.7rem;line-height:1.52;margin-top:10px;max-width:none}
+    .stat-row{gap:5px;margin-top:12px}
+    .stat{min-width:0;flex:1 1 28%;padding:8px 3px 6px;border-radius:10px}
+    .stat b{font-size:.8rem}
+    .stat span{font-size:.46rem;letter-spacing:.07em;margin-top:3px}
+    .featured-points{margin-top:12px;gap:5px}
+    .featured-points li{font-size:.66rem;line-height:1.45}
+    /* video portfolio: desktop 4-across phone grid, neat rows */
+    section.work{justify-content:flex-start;padding-top:30px}
+    .phone-grid{grid-template-columns:repeat(4,1fr);gap:16px 8px;margin-top:20px}
+    .phoneframe{border-radius:17px;padding:5px;box-shadow:0 8px 16px rgba(24,18,16,.16)}
+    .phoneframe::before{width:34px;height:4px;top:9px}
+    .phoneframe .screen{border-radius:12px}
+    .phoneframe .play span{width:23px;height:23px}
+    .phoneframe .play svg{width:8px;height:8px}
+    .vcard figcaption{font-size:.5rem;line-height:1.35;margin-top:6px;padding:0 1px}
+    /* brands: desktop 6-across circle wall */
+    section.brands{justify-content:flex-start;padding-top:30px}
+    .circle-grid{grid-template-columns:repeat(6,1fr);gap:8px;margin-top:20px}
+    .circle{padding:12%;box-shadow:0 5px 12px rgba(24,18,16,.09)}
+    .circle .wm{font-size:.48rem;line-height:1.2}
+    .and-more{font-size:1rem;margin-top:16px}
+    /* services: desktop 3-across cards */
+    .svc-banner{margin-top:16px;padding:11px 10px;border-radius:10px}
+    .svc-banner b{font-size:.7rem}
+    .svc-grid{grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+    .svc-card{padding:5px 5px 9px;box-shadow:0 8px 16px rgba(24,18,16,.12)}
+    .svc-card h3{font-size:.6rem;line-height:1.25;margin:7px 2px 1px}
+    .svc-card p{font-size:.6rem;margin:0 2px}
+    /* process: desktop 4-across steps */
+    .process-grid{grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px}
+    .step{padding:13px 5px 11px;border-radius:12px}
+    .step .icon{width:34px;height:34px;margin-bottom:7px}
+    .step .icon svg{width:16px;height:16px}
+    .step h3{font-size:.58rem;line-height:1.25}
+    /* links & codes: desktop 3-across notes */
+    .shop-grid{grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+    .note{padding:15px 9px 11px}
+    .note h3{font-size:.7rem;margin-top:4px}
+    .note p{font-size:.6rem;line-height:1.45;margin-bottom:10px}
+    .btn{min-height:32px;padding:6px 9px;font-size:.5rem;letter-spacing:.07em;gap:5px;max-width:100%;justify-content:center;text-align:center;white-space:normal;line-height:1.3}
+    .code-row{gap:5px;flex-wrap:wrap}
+    .code-chip{padding:5px 6px;font-size:.58rem;letter-spacing:.05em;border-radius:7px}
+    .code-row button{min-height:30px;padding:6px 8px;font-size:.5rem;letter-spacing:.07em}
+    .copy-msg{font-size:.58rem}
+    .social-row{gap:5px}
+    /* closing slide */
+    .closing h2{font-size:clamp(1.65rem,8.6vw,2.3rem)}
+    .closing-side{gap:12px}
+    .closing-id{gap:10px}
+    .closing-id .polaroid{padding:4px 4px 13px}
+    .closing-id .polaroid img{width:50px;height:50px}
+    .closing-name{font-size:.82rem}
+    .closing-details{gap:5px;font-size:.7rem}
+    .closing-note{font-size:.66rem;line-height:1.5}
+    .foot-links{gap:4px 14px;margin-top:26px;padding-top:14px}
+    .foot-links a{font-size:.54rem;padding:5px 0}
+    .foot-small{font-size:.6rem;margin-top:12px}
+    .foot-music{font-size:.56rem}
+    .music-btn{right:14px;width:44px;height:44px;min-height:44px}
   }
   @media (max-width:600px){
-    .phone-grid{grid-template-columns:repeat(2,1fr);gap:24px 14px}
-    .circle-grid{grid-template-columns:repeat(3,1fr)}
-    .circle{padding:13%}
-    .circle .wm{font-size:.68rem}
-    .svc-grid{grid-template-columns:1fr 1fr;gap:16px}
-    .svc-card h3{font-size:.86rem}
-    .svc-card p{font-size:.86rem}
-    .shop-grid{grid-template-columns:1fr}
-    .process-grid{grid-template-columns:1fr 1fr;gap:14px}
-    .step{padding:22px 14px 20px}
-    .step h3{font-size:.92rem}
-    .music-btn{right:16px;width:48px;height:48px;min-height:48px}
+    /* same slide compositions, tightened a touch for small phones —
+       column counts and side-by-side layouts do not change */
+    .hero-collage{min-height:252px}
+    .hero h1{font-size:clamp(1.7rem,9.6vw,2.2rem)}
+    .phone-grid{gap:14px 7px}
+    .circle-grid{gap:7px}
+    .svc-grid{gap:8px}
+    .shop-grid{gap:8px}
+    .process-grid{gap:7px}
   }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto;scroll-snap-type:none}
